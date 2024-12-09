@@ -6,4 +6,5 @@ Este wireframe es una pagina mas de modelos 3D, pero con un diseño diferente y 
 - sketchfab.com
 - polyhaven.com
 - cgtrader.com
+
 Estas paginas me llamaron la atencion tanto por como tenian organizado sus secciones como por los colores y animaciones que tenian en sus paginas
