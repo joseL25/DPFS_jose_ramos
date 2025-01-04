@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    
+    <script src="https://kit.fontawesome.com/9233c42d29.js" crossorigin="anonymous"></script>
+    
     <title>ModeliFy</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <img class="icon-logo-page" src="logs/LogoPrincipal.png" alt="logo de la pagina">
-            <div class="search-container">
-                <span class="material-symbols-outlined">search</span>
-                <input class="bar-search" type="text" placeholder="Buscar...">
-            </div>
-               
-            <div class="logos-nav">
-                <img class="image-cart" src="logs/carritoDeCompras.png" alt="carrito de compras">
-                <div class="user">
-                    <img class="user-icon" src="logs/user.png" alt="usuario">
-                    <h3><a href="html/login.html">mi cuenta</a></h3>
+            <a class="log-page" href="/">
+                <img class="icon-logo-page" src="logs/LogoPrincipal.png" alt="logo de la pagina">
+            </a>
+            <form>
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="search-input" type="text" placeholder="Buscar...">
                 </div>
+            </form>
+
+            <div class="logos-nav">
+                <a class="cart-conteiner" href="/cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <a class="user-content" href="/login">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h3>mi cuenta</h3>
+                </a>
+
             </div>
         </nav>
-        
+
     </header>
     <section class="first-piece">
         <video class="videoFirst-piece" autoplay loop muted>
             <source src="videos/videoSeccion1_op02.mp4" type="video/mp4">
         </video>
         <h1 class="title">BIENVENIDO</h1>
-        
+
     </section>
 
     <section class="second-piece">
-        
-        <form>   
+
+        <form>
             <select name="modelos" id="modelos">
                 <option value="">tipos de modelos</option>
                 <option value="">estructuras</option>
@@ -53,83 +65,120 @@
                 <option value="">ultimo año</option>
                 <option value="">en cualquier momento</option>
             </select>
-            <input type="submit" value="Buscar">
-        </form> 
+            <input type="submit" value="Buscar" id="search">
+        </form>
     </section>
-    <section class="products-conteiner">
-        <div class="camara-content">
-            <a href="html/productNotFree.html">
-                <img class="camara" src="images/seccion_uno/camara.jpg" alt="camara">
-            </a>
+    <main class="products">
+        <div class="products-conteiner-one">
+            <div class="product-content">
+                <div class="camara-dat-sup">
+                    <div class="user-public">
+                        <i class="fa-solid fa-user"></i>
+                        <h3>user189473824728</h3>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="html/productNotFree.html">
+                    <img class="model" src="images/seccion_uno/camara.jpg" alt="camara">
+                </a>
+                <div class="camara-dat-inf">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <h3 class="camara-title">Camara</h3>
+                    <h3 class="camara-price">200 ARS</h3>
+                </div>
+            </div>
+            <div class="product-content">
+                <div class="casa-dat-sup">
+                    <div class="user-public">
+                        <i class="fa-solid fa-user"></i>
+                        <h3>user189473824728</h3>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <a href="#">
+                    <img class="model" src="images/seccion_uno/casa.jpg" alt="casa">
+                </a>
+                <h3>casa animada</h3>
+            </div>
+            <div class="product-content">
+                <a href="#">
+                    <img class="model" src="images/seccion_uno/cohete.jpg" alt="cohete">
+                </a>
+                <h3>cohete</h3>
+            </div>
+            <div class="product-content">
+                <a href="html/product-soporte.html">
+                    <img class="model" src="images/seccion_uno/soporte.jpg" alt="soporte">
+                </a>
+                <h3>soporte para celular</h3>
+            </div>
         </div>
-        <div class="casa-content">
-            <a href="#">
-                <img class="casa" src="images/seccion_uno/casa.jpg" alt="casa">
-            </a>
+        <div class="products-conteiner-two">
+            <div class="product-content">
+                <a href="#">
+                    <img class="model" id="pantera" src="images/seccion_uno/pantera.jpg" alt="pantera">
+                </a>
+                <h3>pantera</h3>
+            </div>
+            <div class="product-content">
+                <a href="#">
+                    <img class="model" src="images/seccion_uno/model-house.jpg" alt="model-house">
+                </a>
+                <h3>Pokemon charmander</h3>
+            </div>
+            <div class="product-content">
+                <a href="#">
+                    <img class="model" src="images/seccion_uno/reactorARC.jpg" alt="reactorARC">
+                </a>
+                <h3>Reactor ARC de ironman</h3>
+            </div>
+            <div class="product-content">
+                <a href="#">
+                    <img class="model" src="images/seccion_uno/brujulaJackSparrow.jpeg" alt="brujulaJackSparrow">
+                </a>
+                <h3>Brujula de Jack Sparrow</h3>
+            </div>
         </div>
-        <div class="cohete-content">
-            <a href="#">
-                <img class="cohete" src="images/seccion_uno/cohete.jpg" alt="cohete">
-            </a>
-        </div>
-        <div class="soprte-content">
-            <a href="html/product-soporte.html">
-                <img src="images/seccion_uno/soporte.jpg" alt="soporte">
-            </a>
-        </div>
-        <div class="pantera-content">
-            <a href="#">
-                <img class="pantera" src="images/seccion_uno/pantera.jpg" alt="pantera">
-            </a>
-        </div>
-        <div class="charmander-content">
-            <a href="#">
-                <img class="charmander" src="images/seccion_uno/charmander.jpg" alt="charmander">
-            </a>
-        </div>
-        <div class="reactorARC-content">
-            <a href="#">
-                <img class="reactorARC" src="images/seccion_uno/reactorARC.jpg" alt="reactorARC">
-            </a>
-        </div>
-        <div class="brujulaJackSparrow-content">
-            <a href="#">
-                <img class="brujulaJackSparrow" src="images/seccion_uno/brujulaJackSparrow.jpeg" alt="brujulaJackSparrow">
-            </a>
-        </div>
-    </section>
-    <section class="fourth-piece">
-        <div class="products-conteiner-carousel">
-            <div class="product-carousel-one">
+    </main>
+    <section class="products-conteiner-carousel">
+
+        <div class="product-carousel-perlaNegra">
+            <a href="/">
                 <img src="images/seccion_dos/perlaNegra.jpg" alt="perla negra">
-            </div>
-            <div class="product-carousel-two">
-                <img src="images/seccion_dos/truco-magia.png" alt="truco de magia">
-            </div>
-            <div class="product-carousel-three">
-                <img src="images/seccion_dos/brazo-robotico.jpg" alt="brazo robotico">
-            </div>
-            <div class="product-carousel-four">
-                <img src="images/seccion_dos/guitarra-acustica.jpg" alt="guitarra acustica">
-            </div>
-            <div class="product-carousel-five">
-                <img src="images/seccion_dos/pikachu.png" alt="pikachu">
-            </div>
-            <div class="product-carousel-six">
-                <img src="images/seccion_dos/arcade.jpg" alt="arcade">
-            </div>
-            <div class="product-carousel-seven">
-                <img src="images/seccion_dos/lampara-aladin.jpg" alt="lampara de aladin">
-            </div>
-            <div class="product-carousel-eight">
-                <img src="images/seccion_dos/saxofon.jpg" alt="saxofon">
-            </div>
+            </a>
         </div>
+        <div class="product-carousel-trucoMagia">
+            <img src="images/seccion_dos/truco-magia.png" alt="truco de magia">
+        </div>
+        <div class="product-carousel-brazoRobotico">
+            <img src="images/seccion_dos/brazo-robotico.jpg" alt="brazo robotico">
+        </div>
+        <div class="product-carousel-guitarraAcustica">
+            <img src="images/seccion_dos/guitarra-acustica.jpg" alt="guitarra acustica">
+        </div>
+        <div class="product-carousel-pikachu">
+            <img src="images/seccion_dos/pikachu.png" alt="pikachu">
+        </div>
+        <div class="product-carousel-arcade">
+            <img src="images/seccion_dos/arcade.jpg" alt="arcade">
+        </div>
+        <div class="product-carousel-lamparaDeAladin">
+            <img src="images/seccion_dos/lampara-aladin.jpg" alt="lampara de aladin">
+        </div>
+        <div class="product-carousel-saxofon">
+            <img src="images/seccion_dos/saxofon.jpg" alt="saxofon">
+        </div>
+
     </section>
     <section class="newsletter-container">
-        
+
         <div class="image-grid">
             <!-- Contenedor para los cuadrados -->
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
@@ -160,10 +209,10 @@
     <footer>
         <div class="follow">
             <h3>Seguinos</h3>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-discord"></i>
         </div>
         <div class="company">
             <h3>Compania</h3>
@@ -184,4 +233,5 @@
         </div>
     </footer>
 </body>
+
 </html>
