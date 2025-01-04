@@ -22,7 +22,7 @@ app.get('/product',(req,res)=>{
 });
 
 app.get('/cart',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views', 'product-soporte.html'));
+    res.sendFile(path.join(__dirname,'views', 'cart.html'));
 });
 
 
