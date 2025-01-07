@@ -117,6 +117,10 @@ nav form{
     width: auto;
 }
 
+source{
+    width: auto;
+}
+
 .title{
     /* position: relative; */
     z-index: 1;
@@ -156,6 +160,7 @@ nav form{
 .products{
     /* background-color: black; */
     background: linear-gradient(160deg, #0d0d25, #221155, #33285b);
+    height: auto;
 
 }
 
@@ -163,13 +168,14 @@ nav form{
     /* width: max-content; */
     display: flex;
     justify-content: space-around;
+    padding-top: 30px;
 }
 
 .product-content{
     background-color: aliceblue;
     margin: 5px 10px;
     /* margin-bottom: 50px; */
-    height: 360px;
+    height: 330px;
     border-radius: 40px;
 }
 
@@ -190,7 +196,7 @@ nav form{
     margin-left: 15px;
 }
 
-.camara-dat-sup{
+.product-dat-sup{
     display: flex;
     justify-content: space-between;
     /* margin-top: 10px; */
@@ -206,89 +212,24 @@ nav form{
     /* border-radius: 50px; */
 }
 
-.casa-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
-}
-
-.camara-dat-inf{
+.product-dat-inf{
     display: flex;
     justify-content: space-between;
-}
-
-.casa{
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.cohete-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
-}
-
-.cohete{
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.soporte-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
 }
 
 .products-conteiner-two{
     display: flex;
     justify-content: space-around;
+    padding-bottom: 30px;
+    padding-top: 15px;
 }
 
-
-.pantera-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
-}
-
-.pantera{
-    width: 400px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.charmander-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
-}
-
-.charmander{
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.reactorARC-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
-}
-
-.reactorARC{
-    width: 500px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.brujulaJS-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
-}
-
-.brujulaJS{
-    width: 500px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
 .products-conteiner-carousel{
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-between; */
     /* background-color: rgba(red, green, blue, alpha); */
+    /* display: inline-block; */
     background: -webkit-linear-gradient(90deg, #2b2b45,#c4c2d7,#8f4d96);/* Chrome 10-25, Safari 5.1-6 */                          
     background: linear-gradient(90deg, #2b2b45,#c4c2d7,#8f4d96);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
 }
