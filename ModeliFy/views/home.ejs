@@ -1,41 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    
-    <script src="https://kit.fontawesome.com/9233c42d29.js" crossorigin="anonymous"></script>
-    
-    <title>ModeliFy</title>
-</head>
-
+<%- include('./partials/head.ejs',{style:"home"}) %>
 <body>
     <header>
-        <nav>
-            <a class="log-page" href="/">
-                <img class="icon-logo-page" src="logs/LogoPrincipal.png" alt="logo de la pagina">
-            </a>
-            <form>
-                <div class="search-container">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="search-input" type="text" placeholder="Buscar...">
-                </div>
-            </form>
-
-            <div class="logos-nav">
-                <a class="cart-conteiner" href="/cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-
-                <a class="user-content" href="/login">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h3>mi cuenta</h3>
-                </a>
-
-            </div>
-        </nav>
+        <%- include('./partials/nav-bar.ejs') %>
 
     </header>
     <section class="first-piece">
@@ -265,32 +233,7 @@
         </div>
     </section>
 
-    <footer>
-        <div class="follow">
-            <h3>Seguinos</h3>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-discord"></i>
-        </div>
-        <div class="company">
-            <h3>Compania</h3>
-            <ul>
-                <li>Nosotros</li>
-                <li>Nuestros servicios</li>
-                <li>Politica de privacidad</li>
-                <li>Afiliate</li>
-            </ul>
-        </div>
-        <div class="help">
-            <h3>Ayuda</h3>
-            <ul>
-                <li>Preguntas</li>
-                <li>Compras</li>
-                <li>Pago</li>
-            </ul>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>

@@ -3,29 +3,36 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="stylesheet" href="../css/cart.css">  
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="https://kit.fontawesome.com/9233c42d29.js" crossorigin="anonymous"></script>  
     <title>Página de Producto</title>  
 </head>  
 <body>  
     <header>  
         <input type="text" placeholder="Buscar modelos 3D" class="search-bar">  
         <div class="cart-icon">🛒</div>  
-        <div class="user-icon">👤</div>  
+        <div class="user-icon">🔍</div>  
     </header>  
 
     <main>  
         <div class="product-container">  
             <div class="product-image">  
-                <img src="../imagenes/seccion_uno/soporte.jpg" alt="Producto">  
+                <img src="images/seccion_uno/camara.jpg" alt="Imagen del producto">  
             </div>  
             <div class="product-info">  
                 <h1>PRODUCTO</h1>  
-                <div class="rating">⭐⭐⭐⭐☆</div>  
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
                 <button class="download-button">Descargar</button>  
+                <button class="add-cart-button">Agregar al carrito</button>  
             </div>  
         </div>  
 
         <div class="comments-section">  
+            <h2>Comentarios</h2>  
             <div class="tab-links">  
                 <button>Comentarios</button>  
                 <button>Modelos similares</button>  
@@ -33,30 +40,9 @@
             <input type="text" placeholder="Escribe un comentario..." class="comment-input">  
             <input type="text" placeholder="Tu nombre..." class="name-input">  
             <button class="submit-comment">Enviar</button>  
-
-            <div class="related-models">  
-                <h3>Modelos Similares</h3>  
-                <div class="model-card">  
-                    <img src="placeholder-image.jpg" alt="Modelo Similar">  
-                </div>  
-                <div class="model-card">  
-                    <img src="placeholder-image.jpg" alt="Modelo Similar">  
-                </div>  
-                <div class="model-card">  
-                    <img src="placeholder-image.jpg" alt="Modelo Similar">  
-                </div>  
-            </div>  
         </div>  
     </main>  
 
-    <footer>  
-        <p>Política de Privacidad | Ayuda</p>  
-        <div class="social-icons">  
-            <a href="#">Facebook</a>  
-            <a href="#">Instagram</a>  
-            <a href="#">LinkedIn</a>  
-            <a href="#">Twitter</a>  
-        </div>  
-    </footer>  
+    <%- include('./partials/footer.ejs') %>
 </body>  
 </html>

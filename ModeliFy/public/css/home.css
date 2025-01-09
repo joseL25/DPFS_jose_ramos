@@ -3,9 +3,12 @@
     margin: 0;
 }
 
-/* body{  
-    font-family: 'Audiowide', sans-serif;   
-} */
+body{  
+    /* font-family: 'Audiowide', sans-serif;    */
+    /* overflow: hidden; */
+    padding: 0;
+    margin: 0;
+}
 
 
 header{
@@ -112,9 +115,10 @@ nav form{
     height: 768px;
 }
 
-.videoFirst-piece{
-    z-index: -1;
-    width: auto;
+video{
+    /* z-index: -1; */
+    width: 100%;
+    object-fit: cover;
 }
 
 source{
