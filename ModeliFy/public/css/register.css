@@ -1,0 +1,99 @@
+* {  
+    box-sizing: border-box;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #000; /* Fondo negro */  
+    color: #fff; /* Texto blanco */  
+}  
+
+header {  
+    background-color: #333; /* Fondo gris oscuro para la barra de navegación */  
+    padding: 10px;  
+}  
+
+.navbar {  
+    display: flex;  
+    justify-content: center; /* Centrar los enlaces */  
+}  
+
+.navbar a {  
+    color: white; /* Color de los enlaces */  
+    text-decoration: none; /* Sin subrayado */  
+    padding: 15px; /* Espaciado en los enlaces */  
+}  
+
+.logo{
+    width: 150px;
+    height: 150px;
+}
+
+.navbar a:hover {  
+    background-color: #555; /* Fondo al pasar el mouse */  
+}  
+
+.container {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    height: calc(100vh - 60px); /* Altura total menos la altura de la barra de navegación */  
+}  
+
+h1 {  
+    margin-bottom: 20px;  
+}  
+
+.form-container {  
+    background-color: #7e7e7e; /* Gris claro */  
+    padding: 20px;  
+    border-radius: 10px;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  
+}  
+
+h2 {  
+    margin-bottom: 15px;  
+}  
+
+p {  
+    margin-bottom: 20px;  
+}  
+
+label {  
+    display: block;  
+    margin: 10px 0 5px; /* Espacio entre la etiqueta y el campo */  
+}  
+
+input {  
+    width: 100%;  
+    padding: 10px;  
+    margin-bottom: 20px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+
+input:focus {  
+    outline: none;  
+    border-color: #007bff; /* Cambia el borde al enfocarse */  
+}  
+
+.login-button, .register-button {  
+    background-color: #000; /* Negro */  
+    color: #fff; /* Texto blanco */  
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+}  
+
+.login-button:hover, .register-button:hover {  
+    background-color: #444; /* Gris oscuro al pasar el mouse */  
+}  
+
+.register-button {  
+    margin-top: 10px; /* Espacio entre los botones */  
+}

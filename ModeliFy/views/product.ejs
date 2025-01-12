@@ -1,17 +1,9 @@
 <!DOCTYPE html>  
 <html lang="es">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="stylesheet" href="../css/product.css">
-    <script src="https://kit.fontawesome.com/9233c42d29.js" crossorigin="anonymous"></script>  
-    <title>Página de Producto</title>  
-</head>  
+    <%- include('./partials/head.ejs',{style:"product"}) %>
 <body>  
     <header>  
-        <input type="text" placeholder="Buscar modelos 3D" class="search-bar">  
-        <div class="cart-icon">🛒</div>  
-        <div class="user-icon">🔍</div>  
+        <%- include('./partials/nav-bar.ejs') %>
     </header>  
 
     <main>  

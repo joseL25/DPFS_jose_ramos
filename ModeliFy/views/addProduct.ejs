@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs',{style:"home",addProduct:"addProduct"}) %>
+
+<%- include('./partials/head.ejs',{style:"addProduct"}) %>
+
 <body>
     <header>
         <%- include('./partials/nav-bar.ejs') %>
+
     </header>
+    <main>
+        <form>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" required>
 
-    <form >
-        <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" required>
+            <label for="categoria">Categoria</label>
+            <input type="text" name="type" id="categoria" required>
 
-        <label for="categoria">Categoria</label>
-        <input type="text" name="type" id="categoria" required>
-
-        <label for="email"></label>
-        <input type="email" name="email" id="email">
-        <button type="submit">SUBIR PRODUCTO</button>
-    </form>
+            <label for="email"></label>
+            <input type="email" name="email" id="email">
+            <button type="submit">SUBIR PRODUCTO</button>
+        </form>
+    </main>
 
     <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

@@ -4,31 +4,35 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
+const indexRouter = require("./routes/index.routes");
+const usersRoutes = require('./routes/users.routes');
+
 // console.log(path.join(__dirname,'public'));
 
 app.set('view engine', 'ejs');
+app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname,'public')));
 // console.log(path.join(__dirname,'views', 'home.html'));
 
-app.get('/',(req,res)=>{
-    res.render(path.join(__dirname,'views', 'home.ejs')); 
-});
+//home
+app.use("/",indexRouter);
+app.use("/users", usersRoutes);
 
-app.get('/login',(req,res)=>{
-    res.render(path.join(__dirname,'views', 'login.ejs'));
-});
 
+// vista del producto
 app.get('/product',(req,res)=>{
-    res.render(path.join(__dirname,'views', 'product.ejs'));
+    res.render('product.ejs');
 });
 
+// vista del carrito
 app.get('/cart',(req,res)=>{
-    res.render(path.join(__dirname,'views', 'cart.ejs'));
+    res.render('cart.ejs');
 });
 
+// vista de nuevo producto
 app.get('/new-product',(req,res)=>{
-    res.render(path.join(__dirname,'views', 'addProduct.ejs'));
+    res.render('addProduct.ejs');
 });
 
 
