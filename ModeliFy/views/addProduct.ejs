@@ -8,17 +8,43 @@
         <%- include('./partials/nav-bar.ejs') %>
 
     </header>
-    <main>
-        <form>
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" required>
+    <main class="main">
+        <form action="/" method="post">
+            <h1>Nuevo Modelo 3D</h1>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" placeholder="modelo 3d" id="name" required><br>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" placeholder="de que trata el modelo?"></textarea><br>
+            </div>
+            <div>
+                <label for="category">categoria</label>
+                <select name="category" id="category">
+                    <option selected disabled>tipo de modelo</option>
+                    <option value="esculpido">esculpido</option>
+                    <option value="solido">solido</option>
+                    <option value="superficie">superficie</option>
+                    <option value="procedimental">procedimental</option>
+                </select>
 
-            <label for="categoria">Categoria</label>
-            <input type="text" name="type" id="categoria" required>
+                <label for="category">medidas</label>
+                <select name="category" id="category">
+                    <option selected disabled>ancho y alto</option>
+                    <option value="w:80cm - h:100cm">w:80cm - h:100cm</option>
+                    <option value="solido">solido</option>
+                    <option value="superficie">superficie</option>
+                    <option value="procedimental">procedimental</option>
+                </select>
+            </div>
 
-            <label for="email"></label>
-            <input type="email" name="email" id="email">
-            <button type="submit">SUBIR PRODUCTO</button>
+            <div>
+                <label for="price">Precio</label>
+                <input type="number" name="price" id="price">
+            </div>
+
+            <button type="submit">SUBIR MODELO</button>
         </form>
     </main>
 

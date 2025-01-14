@@ -6,7 +6,7 @@
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #000; /* Fondo negro */  
+    background-color: #252525; /* Fondo negro */  
     color: #fff; /* Texto blanco */  
 }  
 
@@ -49,8 +49,9 @@ h1 {
 
 .form-container {  
     background-color: #7e7e7e; /* Gris claro */  
+    height: 600px;
     padding: 20px;  
-    border-radius: 10px;  
+    border-radius: 50px;  
     text-align: center;  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  
 }  
