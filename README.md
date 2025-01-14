@@ -13,6 +13,6 @@ Trello:
 - [Trello](https://trello.com/invite/672139755af52a5358336c3b/ATTI65cdbe94a9190d10bb3032f36491374b1B8D5D93)
 
 miro(wireframe):
--[Miro](https://miro.com/app/board/uXjVLHTq3R0=/?share_link_id=627361408771)
+- [Miro](https://miro.com/app/board/uXjVLHTq3R0=/?share_link_id=627361408771)
 
 Estas paginas me llamaron la atencion tanto por como tenian organizado sus secciones como por los colores y animaciones que tenian en sus paginas
