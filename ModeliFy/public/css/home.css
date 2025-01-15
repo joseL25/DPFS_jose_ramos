@@ -112,7 +112,7 @@ nav form{
 
 .first-piece{
     position: relative;
-    height: 768px;
+    width: 100%;
 }
 
 video{
@@ -126,11 +126,13 @@ source{
 }
 
 .title{
-    /* position: relative; */
+    position: absolute;
     z-index: 1;
-    color: rgb(255, 255, 255);
+    color: rgb(143, 137, 137);
     text-align: center;
-    transform: translateY(-1700%);
+    font-size: 80px;
+    top: 40%;
+    right: 30%;
 }
 
 .second-piece{
