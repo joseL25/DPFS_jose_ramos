@@ -76,6 +76,10 @@ nav form{
     transform: translateY(-17%);
 }
 
+.logos-nav a{
+    text-decoration: none;
+}
+
 .logos-nav a i{
     font-size: 40px;
     padding-left: 2px;
@@ -220,7 +224,7 @@ source{
 
 .product-dat-inf{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .products-conteiner-two{
@@ -263,6 +267,7 @@ source{
 }
 
 .image-grid {
+    background-color: transparent;
     grid-template-columns: repeat(4, 60px);
     grid-template-rows: repeat(4, 60px);
     gap: 10px;
@@ -270,14 +275,14 @@ source{
     width: 400px;
 }
 
-/* .square {
-    width: 60px;
-    height: 60px;
-    background-image: url('imagenes/seccion_dos/pikachu.png'); 
-    background-size: 240px 240px;
-    background-repeat: no-repeat;
-    border-color: aqua;
-} */
+.grid{
+    background-image: url(images/seccion_uno/reactorARC.jpg);
+}
+
+.square{
+    color: transparent;
+    background-color: transparent;
+}
 .square{
     border: #0d0d25 solid 2px;
     width: 80px;
@@ -288,26 +293,6 @@ source{
     display: inline-block;
 }
 
-
-.square:nth-child(1) { background-position: 0 0; }
-.square:nth-child(2) { background-position: -60px 0; }
-.square:nth-child(3) { background-position: -120px 0; }
-.square:nth-child(4) { background-position: -180px 0; }
-
-.square:nth-child(5) { background-position: 0 -60px; }
-.square:nth-child(6) { background-position: -60px -60px; }
-.square:nth-child(7) { background-position: -120px -60px; }
-.square:nth-child(8) { background-position: -180px -60px; }
-
-.square:nth-child(9) { background-position: 0 -120px; }
-.square:nth-child(10) { background-position: -60px -120px; }
-.square:nth-child(11) { background-position: -120px -120px; }
-.square:nth-child(12) { background-position: -180px -120px; }
-
-.square:nth-child(13) { background-position: 0 -180px; }
-.square:nth-child(14) { background-position: -60px -180px; }
-.square:nth-child(15) { background-position: -120px -180px; }
-.square:nth-child(16) { background-position: -180px -180px; }
 
 .form-container {
     /* flex: 1; */

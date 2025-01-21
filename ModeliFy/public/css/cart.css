@@ -7,6 +7,7 @@ body {
     font-family: Arial, sans-serif;  
     background-color: #f0f0f0;  
     margin: 0;  
+    background-color: #333333;
 }  
 
 header{
@@ -70,6 +71,10 @@ nav form{
     transform: translateY(-17%);
 }
 
+.logos-nav a{
+    text-decoration: none;
+}
+
 .logos-nav a i{
     font-size: 40px;
     padding-left: 2px;
@@ -107,6 +112,37 @@ nav form{
 .cart-options{
     display: flex;
     justify-content: space-around;
+    position: relative;
+
+}
+
+.amount{
+    width: 180px;
+    height: 30px;
+    display: flex;
+    /* justify-content: space-around; */
+    background-color: rgb(156, 54, 156);
+    align-content: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    border-radius: 30px;
+    margin-top: 13%;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    /* align-content: center; */
+    border: 2px solid black;
+    border-radius: 50%;
+    /* transform: translateY(-33%); */
+}
+
+.label{
+    font-size: 20px;
+    display: inline-block;
 }
 
 .cart-icon{
@@ -121,24 +157,43 @@ nav form{
 }
 
 .products{
+    display: flex;
+    justify-content: space-around;
     height: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 15px 30px 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: rgb(156, 54, 156);
-    border-radius: 5%;
+    border-radius: 50px;
     
 }
+
+/* .products i{
+    display: block;
+} */
 
 .model-card{
     /* padding: 20px; */
     /* width: 800px; */
-    margin: 20px 30px 20px 30px;
+    /* margin: 20px 30px 20px 30px;
     padding: 25px 0 25px 0;
-    background-color: #D2D2D2;
+    background-color: #D2D2D2; */
+    background-color: rgb(63, 85, 104);
+    margin: 5px 10px;
+    /* margin-bottom: 50px; */
+    height: 250px;
+    border-radius: 30px;
+    align-content: center;
+}
+
+.user-public{
+    /* position: relative; */
+    display: flex;
+    
 }
 
 .model{
-    width: 200px;
+    width: 300px;
 }
 
 footer {  
