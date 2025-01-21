@@ -118,16 +118,17 @@ nav form{
 }
 
 .amount{
-    width: 180px;
+    width: 160px;
     height: 30px;
     display: flex;
     /* justify-content: space-around; */
     background-color: rgb(156, 54, 156);
-    align-content: center;
-    padding-top: 15px;
-    padding-left: 15px;
+    align-items: center;
+    padding: 10px 2px;
+    gap: 27px;
     border-radius: 30px;
     margin-top: 13%;
+    justify-content: start;
 }
 
 .checkbox{
