@@ -5,9 +5,10 @@
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #f0f0f0;  
     margin: 0;  
     background-color: #333333;
+    background: linear-gradient(45deg, #4f4f85,#828094,#744879);
+    /*background-image: url(../images/geometria3D.jpg);*/
 }  
 
 header{
@@ -163,9 +164,8 @@ nav form{
     margin: 30px 15px 30px 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgb(156, 54, 156);
+    background-color: rgb(99, 34, 99);
     border-radius: 50px;
-    
 }
 
 /* .products i{
@@ -189,11 +189,22 @@ nav form{
 .user-public{
     /* position: relative; */
     display: flex;
-    
+    justify-content: center;
+    margin-bottom: 8px;
 }
 
 .model{
     width: 300px;
+}
+
+.dat-inf{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.dat-inf .trash i{
+    font-size: 20px;
 }
 
 footer {  
@@ -202,7 +213,7 @@ footer {
     justify-content: space-between;
     background-color: #707070;  
     /* text-align: center;   */
-    color: white;  
+    color: rgb(0, 0, 0);  
     padding: 10px;  
     position: relative;  
 }  

@@ -10,38 +10,18 @@ body {
     color: #fff; /* Texto blanco */  
 }  
 
-header {  
-    background-color: #333; /* Fondo gris oscuro para la barra de navegación */  
-    padding: 10px;  
-}  
-
-.navbar {  
-    display: flex;  
-    justify-content: center; /* Centrar los enlaces */  
-}  
-
-.navbar a {  
-    color: white; /* Color de los enlaces */  
-    text-decoration: none; /* Sin subrayado */  
-    padding: 15px; /* Espaciado en los enlaces */  
-}  
-
-.logo{
-    width: 150px;
-    height: 150px;
-}
-
-.navbar a:hover {  
-    background-color: #555; /* Fondo al pasar el mouse */  
-}  
 
 .container {  
     display: flex;  
     flex-direction: column;  
     align-items: center;  
     justify-content: center;  
-    height: calc(100vh - 60px); /* Altura total menos la altura de la barra de navegación */  
+    height: calc(100vh - 60px); 
 }  
+
+.form-container{
+    align-content: center;
+}
 
 h1 {  
     margin-bottom: 20px;  
