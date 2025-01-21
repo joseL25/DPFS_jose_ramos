@@ -114,7 +114,8 @@ nav form{
     display: flex;
     justify-content: space-around;
     position: relative;
-
+    align-items: center;
+    margin: 25px 0;
 }
 
 .amount{
@@ -127,7 +128,6 @@ nav form{
     padding: 10px 2px;
     gap: 27px;
     border-radius: 30px;
-    margin-top: 13%;
     justify-content: start;
 }
 
@@ -148,7 +148,6 @@ nav form{
 }
 
 .cart-icon{
-    margin-top: 60px;
     padding: 50px;
     background-color: rgb(156, 54, 156);
     border-radius: 50%;
