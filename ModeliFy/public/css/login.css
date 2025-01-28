@@ -6,7 +6,7 @@
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #000; /* Fondo negro */  
+    background-color: #4d3d3d; 
     color: #fff; /* Texto blanco */  
 }  
 
@@ -29,7 +29,8 @@ h1 {
 
 .form-container {  
     background-color: #7e7e7e; /* Gris claro */  
-    height: 600px;
+    height: 70%;
+    width: 50%;
     padding: 20px;  
     border-radius: 50px;  
     text-align: center;  
@@ -50,16 +51,17 @@ label {
 }  
 
 input {  
-    width: 100%;  
+    width: 50%;  
     padding: 10px;  
     margin-bottom: 20px;  
     border: 1px solid #ccc;  
-    border-radius: 5px;  
+    border-radius: 10px;  
 }  
 
 input:focus {  
     outline: none;  
-    border-color: #007bff; /* Cambia el borde al enfocarse */  
+    border-color: #67539c; /* Cambia el borde al enfocarse */  
+    border: 2px solid;
 }  
 
 .login-button, .register-button {  

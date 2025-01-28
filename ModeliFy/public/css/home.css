@@ -168,25 +168,27 @@ source{
 }
 
 .products{
-    /* background-color: black; */
-    background: linear-gradient(160deg, #0d0d25, #221155, #33285b);
+    background: linear-gradient(160deg, #20204b, #221155);
     height: auto;
-
-}
-
-.products-conteiner-one{
-    /* width: max-content; */
-    display: flex;
-    justify-content: space-around;
-    padding-top: 30px;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .product-content{
-    background-color: aliceblue;
-    margin: 5px 10px;
+    width: 24%;
+    background-color: rgb(4, 98, 180);
+    border: solid 1px white;
+    margin: 10px 5px;
+    display: inline-block;
     /* margin-bottom: 50px; */
-    height: 330px;
+    /* height: 330px; */
+    height: 80%;
     border-radius: 40px;
+    align-items: center;
+}
+
+.product-content:hover{
+    border: solid 1px black;
 }
 
 .camara-content i{
@@ -196,50 +198,40 @@ source{
 }
 
 .user-public{
-    /* position: relative; */
-    display: flex;
-    
+    display: flex; 
+}
+
+.user-public i{
+    align-content: center;
+}
+
+.heart{
+    display: inline-block;
 }
 
 .user-public h3{
-    /* right: 25px; */
     margin-left: 15px;
 }
 
 .product-dat-sup{
     display: flex;
-    justify-content: space-between;
-    /* margin-top: 10px; */
-    margin-right: 35px;
-    margin-left: 20px;
-    transform: translateY(50%);
+    justify-content: space-around;
+    margin: 4% 8% 4% 8%;
+    gap: 4%;
 }
 
 .model{
-    width: 400px;
-    /* height: 300px; */
-    margin: 25px 0px 0px 0px;
-    /* border-radius: 50px; */
+    width: 100%;
 }
 
 .product-dat-inf{
     display: flex;
     justify-content: space-around;
+    margin: 4% 8% 4% 8%;
+    gap: 40px;
 }
-
-.products-conteiner-two{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 30px;
-    padding-top: 15px;
-}
-
 
 .products-conteiner-carousel{
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* background-color: rgba(red, green, blue, alpha); */
-    /* display: inline-block; */
     background: -webkit-linear-gradient(90deg, #2b2b45,#c4c2d7,#8f4d96);/* Chrome 10-25, Safari 5.1-6 */                          
     background: linear-gradient(90deg, #2b2b45,#c4c2d7,#8f4d96);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
 }
@@ -251,51 +243,40 @@ source{
 .newsletter-container {
     height: 500px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    /* background-color: #1a1a1a; */
+    align-items: center;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    /* background: linear-gradient(120deg, #002d62, #0082c8, #2c534f); */
-    /* background: radial-gradient(circle at 30% 50%, #432371, #6c3483, #2d132c); */
-    /* background: linear-gradient(135deg, #000000, #1a1a40, #2d2d70); */
-    /* background: radial-gradient(circle at center, #0a0a23, #151537, #2a2a54); */
-
-
     color: white;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     overflow: hidden;
 }
 
 .image-grid {
-    background-color: transparent;
-    grid-template-columns: repeat(4, 60px);
-    grid-template-rows: repeat(4, 60px);
-    gap: 10px;
-    margin: 20px;
-    width: 400px;
+    background-color: transparent; 
+    margin: 20px 10px; 
+    width: auto; 
 }
 
-.grid{
-    background-image: url(images/seccion_uno/reactorARC.jpg);
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px); 
+    grid-template-rows: repeat(4, 80px); 
+    gap: 10px; 
+    justify-content: start; 
+    align-items: center;
 }
 
-.square{
-    color: transparent;
-    background-color: transparent;
-}
-.square{
-    border: #0d0d25 solid 2px;
+.square {
+    border: 2px solid #0d0d25; 
+    background-color: transparent; 
     width: 80px;
-    height: 80px;
-    background-size: 240px 240px;
+    height: 80px; 
+    background-size: cover; 
     background-repeat: no-repeat;
-    margin: 2px;
-    display: inline-block;
 }
 
 
 .form-container {
-    /* flex: 1; */
     padding: 20px;
     text-align: center;
     width: 200px;

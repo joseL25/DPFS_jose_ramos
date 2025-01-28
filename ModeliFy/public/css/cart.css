@@ -126,9 +126,24 @@ nav form{
     background-color: rgb(156, 54, 156);
     align-items: center;
     padding: 10px 2px;
-    gap: 27px;
+    gap: 10%;
     border-radius: 30px;
     justify-content: start;
+}
+
+.amount .arrow-down{
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 32%;
+    height: 130%;
+    align-content: center;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.arrow-down i{
+    display: flex;
+    justify-content: center;
 }
 
 .checkbox{
@@ -158,8 +173,8 @@ nav form{
 }
 
 .products{
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
+    /* justify-content: space-around; */
     height: auto;
     margin: 30px 15px 30px 15px;
     padding-top: 20px;
@@ -173,14 +188,10 @@ nav form{
 } */
 
 .model-card{
-    /* padding: 20px; */
-    /* width: 800px; */
-    /* margin: 20px 30px 20px 30px;
-    padding: 25px 0 25px 0;
-    background-color: #D2D2D2; */
+    width: 24%;
     background-color: rgb(63, 85, 104);
+    display: inline-block;
     margin: 5px 10px;
-    /* margin-bottom: 50px; */
     height: 250px;
     border-radius: 30px;
     align-content: center;
@@ -194,7 +205,7 @@ nav form{
 }
 
 .model{
-    width: 300px;
+    width: 100%;
 }
 
 .dat-inf{
@@ -208,14 +219,15 @@ nav form{
 }
 
 footer {  
-    height: auto;
+    height: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #707070;  
     /* text-align: center;   */
     color: rgb(0, 0, 0);  
-    padding: 10px;  
-    position: relative;  
+    /* padding: 10px;   */
+    /* position: relative;   */
+    /* margin: 0; */
 }  
 
 footer p{

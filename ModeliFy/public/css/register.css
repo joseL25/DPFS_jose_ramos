@@ -6,33 +6,13 @@
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #252525; /* Fondo negro */  
-    color: #fff; /* Texto blanco */  
+    background-color: #4d3d3d;
+    color: #fff;
 }  
 
 header {  
-    background-color: #333; /* Fondo gris oscuro para la barra de navegación */  
+    background-color: #333; 
     padding: 10px;  
-}  
-
-.navbar {  
-    display: flex;  
-    justify-content: center; /* Centrar los enlaces */  
-}  
-
-.navbar a {  
-    color: white; /* Color de los enlaces */  
-    text-decoration: none; /* Sin subrayado */  
-    padding: 15px; /* Espaciado en los enlaces */  
-}  
-
-.logo{
-    width: 150px;
-    height: 150px;
-}
-
-.navbar a:hover {  
-    background-color: #555; /* Fondo al pasar el mouse */  
 }  
 
 .container {  
@@ -40,7 +20,7 @@ header {
     flex-direction: column;  
     align-items: center;  
     justify-content: center;  
-    height: calc(100vh - 60px); /* Altura total menos la altura de la barra de navegación */  
+    height: calc(100vh - 60px);
 }  
 
 h1 {  
@@ -48,12 +28,14 @@ h1 {
 }  
 
 .form-container {  
-    background-color: #7e7e7e; /* Gris claro */  
-    height: 600px;
+    background-color: #5e5d5d;
+    height: 70%;
+    width: 50%;
     padding: 20px;  
     border-radius: 50px;  
     text-align: center;  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);  
+    align-content: center;
 }  
 
 h2 {  
@@ -70,7 +52,7 @@ label {
 }  
 
 input {  
-    width: 100%;  
+    width: 50%;  
     padding: 10px;  
     margin-bottom: 20px;  
     border: 1px solid #ccc;  
