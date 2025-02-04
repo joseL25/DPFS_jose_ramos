@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs',{style:"home"}) %>
-<body>
-    <header>
-        <%- include('./partials/nav-bar.ejs') %>
+<%- include('./partials/head.ejs',{style:"home"}) %>
 
-    </header>
-    <section class="first-piece">
-        <video class="videoFirst-piece" autoplay loop muted>
-            <source src="videos/videoSeccion1_op02.mp4" type="video/mp4">
-        </video>
-        <h1 class="title">BIENVENIDO</h1>
+    <body>
+        <header>
+            <%- include('./partials/nav-bar.ejs') %>
 
-    </section>
+        </header>
+        <section class="first-piece">
+            <video class="videoFirst-piece" autoplay loop muted>
+                <source src="videos/videoSeccion1_op02.mp4" type="video/mp4">
+            </video>
+            <h1 class="title">BIENVENIDO</h1>
 
-    <section class="second-piece">
+        </section>
 
-        <form>
-            <select name="modelos" id="modelos">
-                <option value="">tipos de modelos</option>
-                <option value="">estructuras</option>
-                <option value="">personajes</option>
-                <option value="">naturaleza</option>
-                <option value="">accesorios</option>
-                <option value="">ciencia ficcion</option>
-            </select>
-            <select name="fecha de publicacion" id="publicacion">
-                <option value="">fecha de publicacion</option>
-                <option value="">ultimo dia</option>
-                <option value="">ultima semana</option>
-                <option value="">ultimo mes</option>
-                <option value="">ultimo año</option>
-                <option value="">en cualquier momento</option>
-            </select>
-            <input type="submit" value="Buscar" id="search">
-        </form>
-    </section>
-    <main class="products">
-        
-        <div class="product-content">
-            <div class="product-dat-sup">
-                <div class="user-public">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>user189473824728</h3>
+        <section class="second-piece">
+
+            <form>
+                <select name="modelos" id="modelos">
+                    <option value="">tipos de modelos</option>
+                    <option value="">estructuras</option>
+                    <option value="">personajes</option>
+                    <option value="">naturaleza</option>
+                    <option value="">accesorios</option>
+                    <option value="">ciencia ficcion</option>
+                </select>
+                <select name="fecha de publicacion" id="publicacion">
+                    <option value="">fecha de publicacion</option>
+                    <option value="">ultimo dia</option>
+                    <option value="">ultima semana</option>
+                    <option value="">ultimo mes</option>
+                    <option value="">ultimo año</option>
+                    <option value="">en cualquier momento</option>
+                </select>
+                <input type="submit" value="Buscar" id="search">
+            </form>
+        </section>
+        <main class="products">
+
+            
+
+                <div class="product-content">
+                    <div class="product-dat-sup">
+                        <div class="user-public">
+                            <i class="fa-solid fa-user"></i>
+                            <h3>
+                                usuario
+                            </h3>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <a href="/detail">
+                        <img class="model" src="./images/camara.jpg" alt="camara">
+                    </a>
+                    <div class="product-dat-inf">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <h3 class="camara-title">
+                            camara
+                        </h3>
+                        <h3 class="camara-price">$999
+                        </h3>
+                    </div>
                 </div>
-                <div class="heart">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
-            <a href="/product">
-                <img class="model" src="images/seccion_uno/camara.jpg" alt="camara">
-            </a>
-            <div class="product-dat-inf">
-                <i class="fa-solid fa-cart-plus"></i>
-                <h3 class="camara-title">Camara</h3>
-                <h3 class="camara-price">200 ARS</h3>
-            </div>
-        </div>
+            
 
-        <div class="product-content">
-            <div class="product-dat-sup">
-                <div class="user-public">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>user189473824728</h3>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="html/productNotFree.html">
-                <img class="model" src="images/seccion_uno/camara.jpg" alt="camara">
-            </a>
-            <div class="product-dat-inf">
-                <i class="fa-solid fa-cart-plus"></i>
-                <h3 class="camara-title">Camara</h3>
-                <h3 class="camara-price">200 ARS</h3>
-            </div>
-        </div>
 
-        <div class="product-content">
+                <!-- <div class="product-content">
+                    <div class="product-dat-sup">
+                        <div class="user-public">
+                            <i class="fa-solid fa-user"></i>
+                            <h3>user189473824728</h3>
+                        </div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <a href="/product">
+                        <img class="model" src="images/camara.jpg" alt="camara">
+                    </a>
+                    <div class="product-dat-inf">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <h3 class="camara-title">Camara</h3>
+                        <h3 class="camara-price">200 ARS</h3>
+                    </div>
+                </div> -->
+
+                    <!-- <div class="product-content">
             <div class="product-dat-sup">
                  <div class="user-public">
                     <i class="fa-solid fa-user"></i>
@@ -84,17 +94,17 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <a href="#">
-                <img class="model" src="images/seccion_uno/cohete.jpg" alt="cohete">
+            <a href="/product">
+                <img class="model" src="images/cohete.jpg" alt="cohete">
             </a>
             <div class="product-dat-inf">
                 <i class="fa-solid fa-cart-plus"></i>
                 <h3 class="camara-title">Cohete</h3>
                 <h3 class="camara-price">200 ARS</h3>
             </div>
-        </div>
-        
-        <div class="product-content">
+        </div> -->
+
+                    <!-- <div class="product-content">
             <div class="product-dat-sup">
                 <div class="user-public">
                     <i class="fa-solid fa-user"></i>
@@ -102,17 +112,17 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <a href="#">
-                <img class="model" src="images/seccion_uno/brujulaJackSparrow.jpeg" alt="brujulaJackSparrow">
+            <a href="/product">
+                <img class="model" src="images/brujula.jpeg" alt="brujulaJackSparrow">
             </a>
             <div class="product-dat-inf">
                 <i class="fa-solid fa-cart-plus"></i>
                 <h3 class="camara-title">Brujula</h3>
                 <h3 class="camara-price">200 ARS</h3>
             </div>
-        </div>
+        </div> -->
 
-        <div class="product-content">
+                    <!-- <div class="product-content">
             <div class="product-dat-sup">
                 <div class="user-public">
                     <i class="fa-solid fa-user"></i>
@@ -120,17 +130,17 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <a href="#">
-                <img class="model" src="images/seccion_uno/model-house.jpg" alt="model-house">
+            <a href="/product">
+                <img class="model" src="images/model-house.jpg" alt="model-house">
             </a>
             <div class="product-dat-inf">
                 <i class="fa-solid fa-cart-plus"></i>
                 <h3 class="camara-title">Casa</h3>
                 <h3 class="camara-price">200 ARS</h3>
             </div>
-        </div>
+        </div> -->
 
-        <div class="product-content">
+                    <!-- <div class="product-content">
             <div class="product-dat-sup">
                 <div class="user-public">
                     <i class="fa-solid fa-user"></i>
@@ -138,81 +148,81 @@
                 </div>
                 <i class="fa-regular fa-heart"></i>
             </div>
-            <a href="#">
-                <img class="model" src="images/seccion_uno/brujulaJackSparrow.jpeg" alt="brujulaJackSparrow">
+            <a href="/product">
+                <img class="model" src="images/brujula.jpeg" alt="brujulaJackSparrow">
             </a>
             <div class="product-dat-inf">
                 <i class="fa-solid fa-cart-plus"></i>
                 <h3 class="camara-title">Brujula</h3>
                 <h3 class="camara-price">200 ARS</h3>
             </div>
-        </div>
-        
-    </main>
-    <section class="products-conteiner-carousel">
+        </div> -->
+        </main>
 
-        <div class="product-carousel-perlaNegra">
-            <a href="/">
-                <img src="images/seccion_dos/perlaNegra.jpg" alt="perla negra">
-            </a>
-        </div>
-        <div class="product-carousel-trucoMagia">
-            <img class="model" src="images/seccion_dos/truco-magia.png" alt="truco de magia">
-        </div>
-        <div class="product-carousel-brazoRobotico">
-            <img src="images/seccion_dos/brazo-robotico.jpg" alt="brazo robotico">
-        </div>
-        <div class="product-carousel-guitarraAcustica">
-            <img class="model" src="images/seccion_dos/guitarra-acustica.jpg" alt="guitarra acustica">
-        </div>
-        <div class="product-carousel-pikachu">
-            <img src="images/seccion_dos/pikachu.png" alt="pikachu">
-        </div>
-        <div class="product-carousel-arcade">
-            <img src="images/seccion_dos/arcade.jpg" alt="arcade">
-        </div>
-        <div class="product-carousel-lamparaDeAladin">
-            <img src="images/seccion_dos/lampara-aladin.jpg" alt="lampara de aladin">
-        </div>
-        <div class="product-carousel-saxofon">
-            <img class="model" src="images/seccion_dos/saxofon.jpg" alt="saxofon">
-        </div>
+        <section class="products-conteiner-carousel">
 
-    </section>
-    <section class="newsletter-container">
-        <div class="image-grid">
-            <div class="grid">
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
+            <div class="product-carousel-perlaNegra">
+                <a href="/">
+                    <img src="images/seccion_dos/perlaNegra.jpg" alt="perla negra">
+                </a>
             </div>
-        </div>
-        
-        <div class="form-container">
-            <h2>Sumate a nuestro Newsletter</h2>
-            <form class="newsletter">
-                <input type="text" name="name" placeholder="nombre" required>
-                <input type="text" name="lastname" placeholder="apellido" required>
-                <input type="email" name="email" id="email" placeholder="correo">
-                <button type="submit">ENVIAR</button>
-            </form>
-        </div>
-    </section>
+            <div class="product-carousel-trucoMagia">
+                <img class="model" src="images/seccion_dos/truco-magia.png" alt="truco de magia">
+            </div>
+            <div class="product-carousel-brazoRobotico">
+                <img src="images/seccion_dos/brazo-robotico.jpg" alt="brazo robotico">
+            </div>
+            <div class="product-carousel-guitarraAcustica">
+                <img class="model" src="images/seccion_dos/guitarra-acustica.jpg" alt="guitarra acustica">
+            </div>
+            <div class="product-carousel-pikachu">
+                <img src="images/seccion_dos/pikachu.png" alt="pikachu">
+            </div>
+            <div class="product-carousel-arcade">
+                <img src="images/seccion_dos/arcade.jpg" alt="arcade">
+            </div>
+            <div class="product-carousel-lamparaDeAladin">
+                <img src="images/seccion_dos/lampara-aladin.jpg" alt="lampara de aladin">
+            </div>
+            <div class="product-carousel-saxofon">
+                <img class="model" src="images/seccion_dos/saxofon.jpg" alt="saxofon">
+            </div>
 
-    <%- include('./partials/footer.ejs') %>
-</body>
+        </section>
+        <section class="newsletter-container">
+            <div class="image-grid">
+                <div class="grid">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h2>Sumate a nuestro Newsletter</h2>
+                <form class="newsletter">
+                    <input type="text" name="name" placeholder="nombre" required>
+                    <input type="text" name="lastname" placeholder="apellido" required>
+                    <input type="email" name="email" id="email" placeholder="correo">
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </section>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
 
 </html>

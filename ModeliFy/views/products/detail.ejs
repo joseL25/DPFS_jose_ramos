@@ -1,9 +1,9 @@
 <!DOCTYPE html>  
 <html lang="es">  
-    <%- include('./partials/head.ejs',{style:"product"}) %>
+    <%- include('../partials/head.ejs',{style:"product"}) %>
 <body>  
     <header>  
-        <%- include('./partials/nav-bar.ejs') %>
+        <%- include('../partials/nav-bar.ejs') %>
     </header>  
 
     <main>  
@@ -12,7 +12,7 @@
                 <img src="images/seccion_uno/camara.jpg" alt="Imagen del producto">  
             </div>  
             <div class="product-info">  
-                <h1>PRODUCTO</h1>  
+                <h1><%= modeloSeleccionado.nombre %></h1>  
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -35,6 +35,6 @@
         </div>  
     </main>  
 
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>  
 </html>

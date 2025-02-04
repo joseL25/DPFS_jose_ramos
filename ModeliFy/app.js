@@ -6,23 +6,28 @@ const port = 3000;
 
 const indexRouter = require("./routes/index.routes");
 const usersRoutes = require('./routes/users.routes');
+const productsRoutes = require('./routes/products.routes');
 
 // console.log(path.join(__dirname,'public'));
 
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "views"));
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname,'public')));
+
 // console.log(path.join(__dirname,'views', 'home.html'));
 
 //home
 app.use("/",indexRouter);
 app.use("/users", usersRoutes);
+app.use("/detail", productsRoutes);
 
 
 // vista del producto
-app.get('/product',(req,res)=>{
-    res.render('product.ejs');
+app.get('/detail',(req,res)=>{
+    res.render('detail.ejs');
 });
 
 // vista del carrito
@@ -32,7 +37,7 @@ app.get('/cart',(req,res)=>{
 
 // vista de nuevo producto
 app.get('/new-product',(req,res)=>{
-    res.render('addProduct.ejs');
+    res.render('create.ejs');
 });
 
 

@@ -1,8 +1,8 @@
 const express = require("express");
-const indexController = require("../controllers/index.controllers");
+const {gethome} = require("../controllers/index.controllers");
 const router = express.Router();
 
 // vista del home
-router.get('/', indexController.gethome);
+router.get('/', gethome);
 
 module.exports = router;
