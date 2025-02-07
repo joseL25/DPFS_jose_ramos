@@ -12,6 +12,7 @@ const productsRoutes = require('./routes/products.routes');
 
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "views"));
+// app.set("products", path.join(__dirname, "products"));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
@@ -27,7 +28,7 @@ app.use("/detail", productsRoutes);
 
 // vista del producto
 app.get('/detail',(req,res)=>{
-    res.render('detail.ejs');
+    res.render('products/detail');
 });
 
 // vista del carrito
@@ -36,8 +37,8 @@ app.get('/cart',(req,res)=>{
 });
 
 // vista de nuevo producto
-app.get('/new-product',(req,res)=>{
-    res.render('create.ejs');
+app.get('/create',(req,res)=>{
+    res.render('products/create');
 });
 
 
