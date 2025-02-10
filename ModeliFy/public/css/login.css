@@ -6,8 +6,8 @@
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #4d3d3d; 
-    color: #fff; /* Texto blanco */  
+    background-color: #4e5d66; 
+    color: #fff; 
 }  
 
 
@@ -28,7 +28,7 @@ h1 {
 }  
 
 .form-container {  
-    background-color: #7e7e7e; /* Gris claro */  
+    background-color: #0c6091; /* Gris claro */  
     height: 70%;
     width: 50%;
     padding: 20px;  

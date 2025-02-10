@@ -4,10 +4,10 @@
 <%- include('../partials/head.ejs',{style:"create"}) %>
 
 <body>
-    <header>
+    <!-- <header> -->
         <%- include('../partials/nav-bar.ejs') %>
 
-    </header>
+    <!-- </header> -->
     <div class="content">
         <h2 class="text" data-text="NUEVO MODELO 3D">NUEVO MODELO 3D</h2>
     </div>
@@ -16,8 +16,8 @@
             <img src="../images/cubo.png" alt="cubo">
         </div>
 
-        <form action="/" method="post">
-            <div class="input-name">
+        <form class="form-dat" action="/" method="post">
+            <div class="input-inf">
                 <div class="content-label">
                     <label for="name">Nombre</label>
                 </div>
@@ -25,48 +25,62 @@
                     <input type="text" name="name" placeholder="modelo 3d" id="name" required><br>
                 </div>
             </div>
-            <div>
+            <div class="input-inf">
                 <div class="content-label">
-                    <label for="description">Description</label>
+                    <label for="description">Descripcion</label>
                 </div>
                 <div class="input-content">
                     <textarea name="description" id="description" placeholder="de que trata el modelo?"></textarea><br>
                 </div>
             </div>
             
-            <div>
+            <div class="input-inf">
                 <div class="content-label">
                     <label for="price">Precio</label>
                 </div>
                 <div class="input-content">
-                    <input type="number" name="price" id="price">
+                    <input type="number" name="price" id="price" placeholder="'0' si el modelo sera gratuito">
                 </div>
             </div>
 
+            <div class="input-inf">
+                <div class="content-label">
+                    <label for="category">categoria</label>
+                </div>
+                <div class="input-content">
+                    <select name="category" id="category">
+                        <option selected disabled>tipo de modelo</option>
+                        <option value="esculpido">esculpido</option>
+                        <option value="solido">solido</option>
+                        <option value="superficie">superficie</option>
+                        <option value="procedimental">procedimental</option>
+                    </select>
+                </div>
+            </div>
 
-            <label for="category">categoria</label>
-            <select name="category" id="category">
-                <option selected disabled>tipo de modelo</option>
-                <option value="esculpido">esculpido</option>
-                <option value="solido">solido</option>
-                <option value="superficie">superficie</option>
-                <option value="procedimental">procedimental</option>
-            </select>
-
-            <label for="category">archivo</label>
-            <select name="category" id="category">
-                <option selected disabled>tipo de archivo</option>
-                <option value="OBJ">OBJ</option>
-                <option value="FBX">FBX</option>
-                <option value="STL">STL</option>
-                <option value="IGES">IGES</option>
-                <option value="AMF">AMF</option>
-            </select>
+            <div class="input-inf">
+                <div class="content-label">
+                    <label for="category">archivo</label>
+                </div>
+                <div class="input-content">
+                    <select name="category" id="category">
+                        <option selected disabled>tipo de archivo</option>
+                        <option value="OBJ">OBJ</option>
+                        <option value="FBX">FBX</option>
+                        <option value="STL">STL</option>
+                        <option value="IGES">IGES</option>
+                        <option value="AMF">AMF</option>
+                    </select>
+                </div>
+            </div>
             
-
-            <div>
-                <label for="imagen">imagen</label>
-                <input type="file" name="file" id="imagen">
+            <div class="input-inf">               
+                <div class="content-label">
+                    <label for="imagen">imagen</label>
+                </div>
+                <div class="input-content image">
+                    <input type="file" name="file" id="imagen">
+                </div>                
             </div>
 
             <div class="send">

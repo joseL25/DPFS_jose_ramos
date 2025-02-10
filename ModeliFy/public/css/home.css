@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 
 body{  
     /* font-family: 'Audiowide', sans-serif;    */
@@ -10,47 +13,31 @@ body{
     margin: 0;
 }
 
-
-header{
-    height: 110px;
-    background-color: #161920;
-    
-}
-
-nav{
+/* Comienza la barra de navegacion */
+.nav-bar{
     height: auto;
     display: flex;
     justify-content: space-between;
+    background-color: #161920;
+    align-items: center;
 }
 
 .log-page{
-    width: 20%;
+    width: 8rem;  
 }
 
 .icon-logo-page{
-    width: 60%;
-    margin: 2px;
-    transform: translateY(-20%);
-}
-
-form{
-    display: inline-block;
-}
-
-nav form{
-    padding-top: 25px;
-    
+    width: 100%;
 }
 
 .search-container{
     width: max-content;
     display: flex;
-    align-items: center;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 28px;
     background-color: #f6f6f6;
+    align-items: center;
 }
-
 
 .search-input{
     font-size: 16px;
@@ -63,21 +50,12 @@ nav form{
     width: 300px;
 }
 
-.search-input::placeholder, .material-symbols-outlined{
-    color: rgba(0, 0, 0, 0.25);
-}
-
 .logos-nav{
     width: 300px;
     display: flex;
     justify-content: space-around;
-    position: relative;
     align-items: center;
-    transform: translateY(-17%);
-}
-
-.logos-nav a{
-    text-decoration: none;
+    /* transform: translateY(-17%); */
 }
 
 .logos-nav a i{
@@ -86,41 +64,30 @@ nav form{
     padding-top: 1px;
 }
 
-.logos-nav .user-content h3{ 
-    border-radius: 20px;
-    height: max-content;
-    transform: translateY(-100%);
-    text-align: center;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 22px;
-}
-
 .logos-nav .user-content{
+    display: flex;
+    justify-content: start;
+    gap: 3%;
     text-decoration: none;
     background-color: #D2D2D2;
     color: black;
-    height: 42px;
-    width: 150px;
-    border-radius: 20px;
-}
+    height: auto;
+    width: 50%;
+    border-radius: 25px;
+    align-items: center;
+    padding: 1% 1%;
+  }
 
 .logos-nav .cart-conteiner i{
-    color: #d2d2d2;
-    
+    color: #d2d2d2;  
 }
-
-.image-cart{
-    width: 50%;
-}
+/* Aqui termina la barra de navegacion */
 
 .first-piece{
-    position: relative;
     width: 100%;
 }
 
 video{
-    /* z-index: -1; */
     width: 100%;
     object-fit: cover;
 }
@@ -131,7 +98,6 @@ source{
 
 .title{
     position: absolute;
-    z-index: 1;
     color: rgb(143, 137, 137);
     text-align: center;
     font-size: 80px;
@@ -314,8 +280,22 @@ button:hover {
 }
 
 footer{
-    background-color: rgb(56, 56, 56);
+    background-color: #707070;
     display: flex;
     justify-content: space-around;
-    height: 150px;
+    height: auto;
+    padding: 2% 0 2% ;
+}
+
+footer .follow{
+    width: 150px;
+}
+
+footer .follow i{
+    font-size: 25px;
+    margin: 2%;
+}
+
+ul{
+    list-style-type: none;
 }

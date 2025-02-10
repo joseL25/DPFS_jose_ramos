@@ -2,9 +2,9 @@
 <html lang="es">  
     <%- include('../partials/head.ejs',{style:"product"}) %>
 <body>  
-    <header>  
+    
         <%- include('../partials/nav-bar.ejs') %>
-    </header>  
+     
 
     <main>  
         <div class="product-container">  
@@ -13,18 +13,30 @@
             </div>  
             <div class="product-info">  
                 <h1>producto</h1>  
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <button class="download-button">Descargar</button>  
-                <button class="add-cart-button">Agregar al carrito</button>  
+                <div class="stars-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="button-action">
+                    <button class="download-button">Descargar</button>  
+                    <button class="add-cart-button">Agregar al carrito</button>  
+                </div>
             </div>  
+            <div class="option-data">
+                <button class="edit-product"><i class="fa-solid fa-pen"></i></button>
+                <button class="delete-product"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="view-part"></div>
+            <div class="view-part"></div>
+            <div class="view-part"></div>
+            <div class="view-part"></div>
         </div>  
 
         <div class="comments-section">  
-            <h2>Comentarios</h2>  
+            <!-- <h2>Comentarios</h2>   -->
             <div class="tab-links">  
                 <button>Comentarios</button>  
                 <button>Modelos similares</button>  
