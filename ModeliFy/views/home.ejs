@@ -37,8 +37,8 @@
         </section>
         <main class="products">
 
+            <% models.forEach(model => { %>
             
-
                 <div class="product-content">
                     <div class="product-dat-sup">
                         <div class="user-public">
@@ -52,109 +52,19 @@
                         </div>
                     </div>
                     <a href="/detail">
-                        <img class="model" src="./images/camara.jpg" alt="camara">
+                        <img class="model" src="<%= model.imagen %>" alt="<%= model.nombre %>">
                     </a>
                     <div class="product-dat-inf">
                         <i class="fa-solid fa-cart-plus"></i>
                         <h3 class="camara-title">
-                            camara
+                            <%= model.nombre %>
                         </h3>
-                        <h3 class="camara-price">$999
-                        </h3>
+                        <h3 class="camara-price">$<%= model.precio %></h3>
                     </div>
                 </div>
-            
 
+            <% }) %>
 
-                <!-- <div class="product-content">
-                    <div class="product-dat-sup">
-                        <div class="user-public">
-                            <i class="fa-solid fa-user"></i>
-                            <h3>user189473824728</h3>
-                        </div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a href="/product">
-                        <img class="model" src="images/camara.jpg" alt="camara">
-                    </a>
-                    <div class="product-dat-inf">
-                        <i class="fa-solid fa-cart-plus"></i>
-                        <h3 class="camara-title">Camara</h3>
-                        <h3 class="camara-price">200 ARS</h3>
-                    </div>
-                </div> -->
-
-                    <!-- <div class="product-content">
-            <div class="product-dat-sup">
-                 <div class="user-public">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>user189473824728</h3>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="/product">
-                <img class="model" src="images/cohete.jpg" alt="cohete">
-            </a>
-            <div class="product-dat-inf">
-                <i class="fa-solid fa-cart-plus"></i>
-                <h3 class="camara-title">Cohete</h3>
-                <h3 class="camara-price">200 ARS</h3>
-            </div>
-        </div> -->
-
-                    <!-- <div class="product-content">
-            <div class="product-dat-sup">
-                <div class="user-public">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>user189473824728</h3>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="/product">
-                <img class="model" src="images/brujula.jpeg" alt="brujulaJackSparrow">
-            </a>
-            <div class="product-dat-inf">
-                <i class="fa-solid fa-cart-plus"></i>
-                <h3 class="camara-title">Brujula</h3>
-                <h3 class="camara-price">200 ARS</h3>
-            </div>
-        </div> -->
-
-                    <!-- <div class="product-content">
-            <div class="product-dat-sup">
-                <div class="user-public">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>user189473824728</h3>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="/product">
-                <img class="model" src="images/model-house.jpg" alt="model-house">
-            </a>
-            <div class="product-dat-inf">
-                <i class="fa-solid fa-cart-plus"></i>
-                <h3 class="camara-title">Casa</h3>
-                <h3 class="camara-price">200 ARS</h3>
-            </div>
-        </div> -->
-
-                    <!-- <div class="product-content">
-            <div class="product-dat-sup">
-                <div class="user-public">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>user189473824728</h3>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <a href="/product">
-                <img class="model" src="images/brujula.jpeg" alt="brujulaJackSparrow">
-            </a>
-            <div class="product-dat-inf">
-                <i class="fa-solid fa-cart-plus"></i>
-                <h3 class="camara-title">Brujula</h3>
-                <h3 class="camara-price">200 ARS</h3>
-            </div>
-        </div> -->
         </main>
 
         <section class="products-conteiner-carousel">

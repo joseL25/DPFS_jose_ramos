@@ -1,34 +1,47 @@
-{
-    "modelos_3D": [
-      {
-        "id": 1,
-        "nombre": "camara",
-        "precio": 49.99,
-        "imagen": "./images/camara.jpg"
-      },
-      {
-        "id": 2,
-        "nombre": "Robot Avanzado",
-        "precio": 29.99,
-        "imagen": "https://example.com/images/robot-avanzado.jpg"
-      },
-      {
-        "id": 3,
-        "nombre": "Edificio Moderno",
-        "precio": 19.99,
-        "imagen": "https://example.com/images/edificio-moderno.jpg"
-      },
-      {
-        "id": 4,
-        "nombre": "Nave Espacial",
-        "precio": 39.99,
-        "imagen": "https://example.com/images/nave-espacial.jpg"
-      },
-      {
-        "id": 5,
-        "nombre": "Personaje Fantasía",
-        "precio": 24.99,
-        "imagen": "https://example.com/images/personaje-fantasia.jpg"
-      }
-    ]
+[
+  {
+    "id": 1,
+    "nombre": "camara",
+    "descripcion": "Es una camara canon",
+    "archivo": "STL",
+    "modelo": "solido",
+    "precio": 49.99,
+    "imagen": "./images/camara.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "cohete",
+    "descripcion": "Es una camara canon",
+    "archivo": "STL",
+    "modelo": "solido",
+    "precio": 29.99,
+    "imagen": "./images/cohete.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Edificio Moderno",
+    "descripcion": "Es una camara canon",
+    "archivo": "STL",
+    "modelo": "solido",
+    "precio": 19.99,
+    "imagen": "https://example.com/images/edificio-moderno.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Nave Espacial",
+    "descripcion": "Es una camara canon",
+    "archivo": "STL",
+    "modelo": "solido",
+    "precio": 39.99,
+    "imagen": "https://example.com/images/nave-espacial.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Personaje Fantasía",
+    "descripcion": "Es una camara canon",
+    "archivo": "STL",
+    "modelo": "solido",
+    "precio": 24.99,
+    "imagen": "https://example.com/images/personaje-fantasia.jpg"
   }
+]

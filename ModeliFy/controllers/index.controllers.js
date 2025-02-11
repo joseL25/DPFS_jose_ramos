@@ -5,12 +5,15 @@ const modelsPath = path.join(__dirname,'..','data','products.json')
 
 const indexController = {
     gethome:(req,res)=>{
-
-        console.log(JSON.parse(fs.readFileSync(modelsPath,'utf-8')))
+        // console.log(JSON.parse(fs.readFileSync(modelsPath,'utf-8')))
         const models = JSON.parse(fs.readFileSync(modelsPath,'utf-8'));
 
         res.render("home.ejs",{ models }); 
-    }
+    },
+    // create:(req,res)=>{
+    //     const models = JSON.parse(fs.readFileSync(modelsPath,'utf-8'));
+    //     res.render("products/create.ejs");
+    // }
 }
 
 module.exports = indexController;
