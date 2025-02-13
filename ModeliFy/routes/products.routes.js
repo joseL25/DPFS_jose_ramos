@@ -2,7 +2,9 @@ const express = require("express");
 const { product, 
         create, 
         edit, 
-        save } = require("../controllers/products.controllers");
+        save,
+        update,
+        destroy } = require("../controllers/products.controllers");
 // const path = require("path");
 // const multer = require("multer");
 const upload = require("../middlewares/multer.js");
@@ -19,5 +21,9 @@ router.post("/create", upload.uploadProd.single('imagen'), save);
 router.get('/detail/:id', product);
 //vista del formulario de edicion
 router.get("/edit/:id", edit);
+//proceso de edicion
+router.put('/edit/:id', upload.uploadProd.single('imagen'), update);
+//proceso de borrar
+router.delete('/delete/:id', destroy);
 
 module.exports = router;

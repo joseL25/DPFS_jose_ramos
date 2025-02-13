@@ -1,29 +1,38 @@
 [
  {
   "id": 1,
-  "name": "camara",
-  "description": "Es una camara canon",
-  "price": "49.99",
-  "category": "solido",
-  "archivo": "STL",
-  "imagen": "camara.jpg"
+  "name": "arcade",
+  "description": "máquina arcade clásica con un diseño moderno y estilizado.",
+  "price": "414",
+  "category": "procedimental",
+  "file": "STL",
+  "imagen": "mod-1739443748916.jpg"
  },
  {
   "id": 2,
   "name": "cohete",
   "description": "viajes espaciales",
-  "price": "9999",
-  "category": "esculpido",
+  "price": "245",
+  "category": "solido",
   "file": "STL",
-  "imagen": "mod-1739397292654.jpg"
+  "imagen": "mod-1739446967376.jpg"
  },
  {
   "id": 3,
   "name": "brujula",
-  "description": "modelo basado en los piratas del caribe",
-  "price": "39",
+  "description": "piratas del caribe",
+  "price": "675",
   "category": "procedimental",
   "file": "OBJ",
-  "imagen": "mod-1739406234331.jpeg"
+  "imagen": "mod-1739447004206.jpeg"
+ },
+ {
+  "id": 4,
+  "name": "casa",
+  "description": "modelo 3D de una casa con un estilo low-poly y una iluminación cálida. La casa tiene un techo de tejas rojas, una chimenea y paredes de color amarillo ocre con detalles en relieve.",
+  "price": "159",
+  "category": "esculpido",
+  "file": "IGES",
+  "imagen": "mod-1739447218281.jpg"
  }
 ]

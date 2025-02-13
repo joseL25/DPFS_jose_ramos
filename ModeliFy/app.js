@@ -8,15 +8,16 @@ const indexRouter = require("./routes/index.routes");
 const usersRoutes = require('./routes/users.routes');
 const productsRoutes = require('./routes/products.routes');
 
+// ejs config
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "views"));
-// app.set("products", path.join(__dirname, "products"));
 
+//Setea carpeta publica o estatica
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ejs config
+//config form
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 
 
