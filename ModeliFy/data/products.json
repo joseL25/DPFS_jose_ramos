@@ -1,47 +1,29 @@
 [
-  {
-    "id": 1,
-    "nombre": "camara",
-    "descripcion": "Es una camara canon",
-    "archivo": "STL",
-    "modelo": "solido",
-    "precio": 49.99,
-    "imagen": "./images/camara.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "cohete",
-    "descripcion": "Es una camara canon",
-    "archivo": "STL",
-    "modelo": "solido",
-    "precio": 29.99,
-    "imagen": "./images/cohete.jpg"
-  },
-  {
-    "id": 3,
-    "nombre": "Edificio Moderno",
-    "descripcion": "Es una camara canon",
-    "archivo": "STL",
-    "modelo": "solido",
-    "precio": 19.99,
-    "imagen": "https://example.com/images/edificio-moderno.jpg"
-  },
-  {
-    "id": 4,
-    "nombre": "Nave Espacial",
-    "descripcion": "Es una camara canon",
-    "archivo": "STL",
-    "modelo": "solido",
-    "precio": 39.99,
-    "imagen": "https://example.com/images/nave-espacial.jpg"
-  },
-  {
-    "id": 5,
-    "nombre": "Personaje Fantasía",
-    "descripcion": "Es una camara canon",
-    "archivo": "STL",
-    "modelo": "solido",
-    "precio": 24.99,
-    "imagen": "https://example.com/images/personaje-fantasia.jpg"
-  }
+ {
+  "id": 1,
+  "name": "camara",
+  "description": "Es una camara canon",
+  "price": "49.99",
+  "category": "solido",
+  "archivo": "STL",
+  "imagen": "camara.jpg"
+ },
+ {
+  "id": 2,
+  "name": "cohete",
+  "description": "viajes espaciales",
+  "price": "9999",
+  "category": "esculpido",
+  "file": "STL",
+  "imagen": "mod-1739397292654.jpg"
+ },
+ {
+  "id": 3,
+  "name": "brujula",
+  "description": "modelo basado en los piratas del caribe",
+  "price": "39",
+  "category": "procedimental",
+  "file": "OBJ",
+  "imagen": "mod-1739406234331.jpeg"
+ }
 ]

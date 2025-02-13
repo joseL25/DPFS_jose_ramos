@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head.ejs',{style:"create"}) %>
+<%- include('../partials/head.ejs',{style:"edit"}) %>
 
 <body>
 
     <%- include('../partials/nav-bar.ejs') %>
 
     <div class="content">
-        <h2 class="text" data-text="NUEVO MODELO 3D">NUEVO MODELO 3D</h2>
+        <h2 class="text" data-text="EDITANDO <%= modelEdit.name %>">EDITANDO <%= modelEdit.name %></h2>
     </div>
     <main class="main">
         <div class="cubo">
             <img src="../images/cubo.png" alt="cubo">
         </div>
 
-        <form class="form-dat" action="/products/create" method="post" enctype="multipart/form-data">
+        <form class="form-dat" action="/products/edit/<%= modelEdit.id %>?_method=PUT" method="post" enctype="multipart/form-data">
             <div class="input-inf">
                 <div class="content-label">
                     <label for="name">Nombre</label>
                 </div>
                 <div class="input-content">
-                    <input type="text" name="name" placeholder="modelo 3d" id="name" required>
+                    <input type="text" name="name" placeholder="<%= modelEdit.name %>" id="name" required><br>
                 </div>
             </div>
             <div class="input-inf">
@@ -29,7 +29,7 @@
                     <label for="description">Descripcion</label>
                 </div>
                 <div class="input-content">
-                    <textarea name="description" id="description" placeholder="de que trata el modelo?"></textarea><br>
+                    <textarea name="description" id="description" placeholder="de que trata el modelo?"><%= modelEdit.description %></textarea><br>
                 </div>
             </div>
             
@@ -38,7 +38,7 @@
                     <label for="price">Precio</label>
                 </div>
                 <div class="input-content">
-                    <input type="number" name="price" id="price" placeholder="'0' si el modelo sera gratuito">
+                    <input type="number" name="price" id="price" placeholder="<%= modelEdit.price %>">
                 </div>
             </div>
 
@@ -59,10 +59,10 @@
 
             <div class="input-inf">
                 <div class="content-label">
-                    <label for="file">archivo</label>
+                    <label for="category">archivo</label>
                 </div>
                 <div class="input-content">
-                    <select name="file" id="file">
+                    <select name="category" id="category">
                         <option selected disabled>tipo de archivo</option>
                         <option value="OBJ">OBJ</option>
                         <option value="FBX">FBX</option>
@@ -78,12 +78,12 @@
                     <label for="imagen">imagen</label>
                 </div>
                 <div class="input-content image">
-                    <input type="file" name="imagen" id="imagen">
+                    <input type="file" name="imagen" id="imagen" accept="imagen/*">
                 </div>                
             </div>
 
             <div class="send">
-                <button type="submit">SUBIR MODELO</button>
+                <button type="submit">EDITAR</button>
             </div>
         </form>
     </main>

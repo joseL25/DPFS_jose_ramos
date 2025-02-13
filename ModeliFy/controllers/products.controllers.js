@@ -5,39 +5,43 @@ const modelsPath = path.join(__dirname, '..', 'data', 'products.json');
 
 module.exports = {
     product: (req, res) => {
-        const models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
-        const modeloSeleccionado = models.find((model) => model.id == 1);
+        let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
+        const modelFound = models.find((model) => model.id == req.params.id);
+        
+        // let products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
+        // let prodFound = products.find((prod) => prod.id == req.params.id);
+        
+        res.render('products/detail', { modelFound });
+    },
+    create: (req, res) => {
+        // let models = JSON.parse(fs.readFileSync(modelsPath,'utf-8'));
+        res.render("products/create");
+    },
+    save: (req, res) => {
+        let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
+        // let lastModel = models.pop();
+        // models.push(lastModel);
 
-        res.render('detail.ejs', { modeloSeleccionado });
+        let newModel = {
+            id: models.length + 1,
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            category: req.body.category,
+            file: req.body.file,
+            imagen: req.file.filename || "default.png"
+        };
+
+        models.push(newModel);
+
+        fs.writeFileSync(modelsPath, JSON.stringify(models, null, " "));
+
+        res.redirect("/");
+    },
+    edit: (req, res) => {
+        let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
+        let modelEdit = models.find((model) => model.id == req.params.id);
+
+        res.render("products/edit",{modelEdit});
     }
 }
-
-// module.exports = {
-//     detail: (req, res) => {
-//         const bicis = JSON.parse(fs.readFileSync(bicisPath, "utf-8"));
-//         const biciSeleccionada = bicis.find((bici) => bici.id == req.params.id);
-//         if (biciSeleccionada) {
-//             res.render("products/detail", { biciSeleccionada });
-//         }
-//         res.send("La bici no existe");
-//     },
-//     create: (req, res) => {
-//         res.render("products/create");
-//     },
-//     store: (req, res) => {
-//         let bicis = JSON.parse(fs.readFileSync(bicisPath, "utf-8"));
-
-//         let nuevaBici = {
-//             id: bicis[bicis.length - 1].id + 1,
-//             nombre: req.body.nombre,
-//             marca: req.body.marca,
-//             precio: req.body.precio,
-//             imagen: req.body.image || "/images/default.png",
-//         };
-
-//         bicis.push(nuevaBici);
-
-//         fs.writeFileSync(bicisPath, JSON.stringify(bicis, null, " "));
-//         res.redirect("/");
-//     },
-// };

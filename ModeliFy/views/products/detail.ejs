@@ -3,36 +3,37 @@
     <%- include('../partials/head.ejs',{style:"product"}) %>
 <body>  
     
-        <%- include('../partials/nav-bar.ejs') %>
-     
+    <%- include('../partials/nav-bar.ejs') %>
 
+    <% if (modelFound) { %>
     <main>  
         <div class="product-container">  
-            <div class="product-image">  
-                <img src="images/camara.jpg" alt="Imagen del producto">  
-            </div>  
-            <div class="product-info">  
-                <h1>producto</h1>  
-                <div class="stars-icon">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <div class="button-action">
-                    <button class="download-button">Descargar</button>  
-                    <button class="add-cart-button">Agregar al carrito</button>  
-                </div>
-            </div>  
+                <div class="product-image">  
+                    <img src="../images/modelos/<%= modelFound.imagen %>" alt="<%= modelFound.name %>">  
+                </div>  
+                <div class="product-info">  
+                    <h1><%= modelFound.name %></h1>  
+                    <div class="stars-icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="button-action">
+                        <button class="download-button">Descargar</button>  
+                        <button class="add-cart-button">Agregar al carrito</button>  
+                    </div>
+                </div>  
+            
             <div class="option-data">
-                <button class="edit-product"><i class="fa-solid fa-pen"></i></button>
-                <button class="delete-product"><i class="fa-solid fa-trash"></i></button>
+                <a class="edit-product" href="/products/edit/<%= modelFound.id %>"><i class="fa-solid fa-pen"></i></a>
+                <a class="delete-product"><i class="fa-solid fa-trash"></i></a>
             </div>
+            <!-- <div class="view-part"></div>
             <div class="view-part"></div>
             <div class="view-part"></div>
-            <div class="view-part"></div>
-            <div class="view-part"></div>
+            <div class="view-part"></div> -->
         </div>  
 
         <div class="comments-section">  
@@ -46,7 +47,11 @@
             <button class="submit-comment">Enviar</button>  
         </div>  
     </main>  
-
+    <% } else { %>
+        <main class="container">
+            <h1>El producto que buscas no existe</h1>
+        </main>
+    <% } %>
     <%- include('../partials/footer.ejs') %>
 </body>  
 </html>

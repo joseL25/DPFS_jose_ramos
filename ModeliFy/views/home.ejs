@@ -51,15 +51,15 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </div>
-                    <a href="/detail">
-                        <img class="model" src="<%= model.imagen %>" alt="<%= model.nombre %>">
+                    <a href="/products/detail/<%= model.id %>">
+                        <img class="model" src="images/modelos/<%= model.imagen %>" alt="<%= model.name %>">
                     </a>
                     <div class="product-dat-inf">
                         <i class="fa-solid fa-cart-plus"></i>
                         <h3 class="camara-title">
-                            <%= model.nombre %>
+                            <%= model.name %>
                         </h3>
-                        <h3 class="camara-price">$<%= model.precio %></h3>
+                        <h3 class="camara-price">$<%= model.price %></h3>
                     </div>
                 </div>
 
