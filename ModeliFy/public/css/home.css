@@ -79,9 +79,14 @@ body{
     padding: 1% 1%;
 }
 
-.user-content:active{
+/* .user-content:active{
     visibility: hidden;
+} */
+
+.user-content:active{
+    opacity: 0%;
 }
+
 
 .logos-nav .cart-conteiner i{
     color: #d2d2d2;  
@@ -161,9 +166,15 @@ source{
     align-items: center;
 }
 
+.product-content a{
+    display: inline-block;
+    border: 1px solid white;
+}
+
 .product-content:hover{
     /* border: solid 1px black; */
     transform: scale(1.03);
+    /* box-shadow: 0 4px 10px rgba(190, 78, 255, 0.5);*/
     transition: .3s;
     /* animation: 1.5s infinite alternate; */
     /* border: none; */
@@ -201,6 +212,7 @@ source{
 
 .model{
     width: 100%;
+    border: 1px solid white;
 }
 
 .product-dat-inf{

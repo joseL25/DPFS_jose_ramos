@@ -323,6 +323,10 @@ main{
   background-color: #693d60;
 }
 
+textarea{
+  resize: none;
+}
+
 
 footer{
     background-color: #707070;
