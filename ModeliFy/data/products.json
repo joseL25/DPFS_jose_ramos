@@ -34,5 +34,23 @@
   "category": "esculpido",
   "file": "IGES",
   "imagen": "mod-1739447218281.jpg"
+ },
+ {
+  "id": 5,
+  "name": "astronauta",
+  "description": "Modelo inspirado en Neil Armstrong",
+  "price": "1500",
+  "category": "esculpido",
+  "file": "STL",
+  "imagen": "mod-1739900487093.jpg"
+ },
+ {
+  "id": 6,
+  "name": "among us",
+  "description": "basado en el juego de among us, es el rojo",
+  "price": "0",
+  "category": "procedimental",
+  "file": "STL",
+  "imagen": "mod-1739900717557.jpg"
  }
 ]
