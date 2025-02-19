@@ -104,7 +104,7 @@ a{
 }  
 
 .product-image img {  
-    max-width: 100%;  
+    width: 100%;  
     height: auto;  
     border-radius: 10px;
 }  
@@ -117,7 +117,11 @@ a{
 }  
 
 .stars-icon{
-    margin: 6% 0 12%;
+    margin: 4% 0;
+}
+
+.description{
+    margin: 0 0 4%;
 }
 
 .button-action {
