@@ -4,6 +4,9 @@ const usersControllers = {
     },
     getRegister:(req,res)=>{
         res.render('../views/users/register');
+    },
+    getProfile:(req,res)=>{
+        res.render('../views/users/profile');
     }
 }
 

@@ -8,4 +8,7 @@ router.get('/login', usersController.getLogin);
 //vista de register
 router.get('/register', usersController.getRegister);
 
+//vista de perfil
+router.get('/profile', usersController.getProfile);
+
 module.exports = router;

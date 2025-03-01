@@ -13,6 +13,16 @@ const storageProd = multer.diskStorage({
   }
 })
 
+// const storageUser = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, path.join(__dirname, '../public/images/avatar') )
+//   },
+//   filename: function (req, file, cb) {
+//     const uniqueSuffix = 'mod-' + Date.now() + path.extname(file.originalname);
+//     cb(null, uniqueSuffix);
+//   }
+// })
+
 const uploadProd = multer({ storage: storageProd });
 
 // const uploadProd = multer({ storage: storageProd });

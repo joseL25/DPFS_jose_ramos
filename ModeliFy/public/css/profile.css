@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+body{  
+    /* font-family: 'Audiowide', sans-serif;    */
+    /* overflow: hidden; */
+    padding: 0;
+    margin: 0;
+}
+
+/* Comienza la barra de navegacion */
+.nav-bar{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #161920;
+    align-items: center;
+}
+
+.log-page{
+    width: 8rem;  
+}
+
+.icon-logo-page{
+    width: 100%;
+    /* height: 40%; */
+}
+
+.search-container{
+    width: max-content;
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    align-items: center;
+}
+
+.search-input{
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 300px;
+}
+
+.logos-nav{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* transform: translateY(-17%); */
+}
+
+.logos-nav a i{
+    font-size: 40px;
+    padding-left: 2px;
+    padding-top: 1px;
+}
+
+.logos-nav .user-content{
+    display: flex;
+    justify-content: start;
+    gap: 3%;
+    text-decoration: none;
+    background-color: #D2D2D2;
+    color: black;
+    height: auto;
+    width: 50%;
+    border-radius: 25px;
+    align-items: center;
+    padding: 1% 1%;
+}
+
+/* .user-content:active{
+    visibility: hidden;
+} */
+
+.user-content:active{
+    opacity: 0%;
+}
+
+
+.logos-nav .cart-conteiner i{
+    color: #d2d2d2;  
+}
+/* Aqui termina la barra de navegacion */
+
+.profile-section{
+    height: auto;
+    width: auto;
+}
+
+.profile{
+    height: 350px;
+    width: 300px;
+    background-color: #333333;
+    margin: 25px 0 60px 35px;
+    border-radius: 30px;
+}
+
+/* Aqui comienza el footer */
+footer{
+    background-color: #707070;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    padding: 2% 0 2% ;
+}
+
+footer .follow{
+    width: 150px;
+}
+
+footer .follow i{
+    font-size: 25px;
+    margin: 2%;
+}
+
+.follow i:hover{
+    color: red;
+    /* transform: scale(1.5%); */
+}
+
+ul{
+    list-style-type: none;
+}
+/* Aqui termina el footer */

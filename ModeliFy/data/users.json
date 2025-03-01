@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "email": "juan.perez@example.com",
+        "contraseña": "password123",
+        "categoría": "usuario",
+        "avatar": "https://example.com/imagenes/juanperez.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "jose",
+        "apellido": "ramos",
+        "email": "jose.ramos@example.com",
+        "contraseña": "password456",
+        "categoría": "admin",
+        "avatar": "https://example.com/imagenes/mariagomez.jpg"
+    }
+]
