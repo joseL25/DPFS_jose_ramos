@@ -93,17 +93,42 @@ body{
 }
 /* Aqui termina la barra de navegacion */
 
-.profile-section{
+main{
     height: auto;
     width: auto;
+}
+
+.profile-section{
+    margin: 25px auto 0;
+    width: 95%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 10px;
 }
 
 .profile{
     height: 350px;
     width: 300px;
-    background-color: #333333;
-    margin: 25px 0 60px 35px;
+    background-color: #9e5e99;
+    /* margin: 25px 0 60px 35px; */
     border-radius: 30px;
+}
+
+.profile-branches{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.branch{
+    width: 150px;
+    height: 60px;
+    background-color: #707070;
+    /* margin: 0 10px; */
+    border-radius: 10px;
 }
 
 /* Aqui comienza el footer */
