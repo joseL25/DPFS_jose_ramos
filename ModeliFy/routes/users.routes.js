@@ -1,14 +1,20 @@
 const express = require("express");
-const usersController = require("../controllers/users.controllers");
+const {getLogin,
+    getRegister,
+    getProfile,
+    processRegister} = require("../controllers/users.controllers");
 const router = express.Router();
 
+
+
 // vista de login
-router.get('/login', usersController.getLogin);
+router.get('/login', getLogin);
 
 //vista de register
-router.get('/register', usersController.getRegister);
+router.get('/register', getRegister);
+router.post('/register', processRegister);
 
 //vista de perfil
-router.get('/profile', usersController.getProfile);
+router.get('/profile', getProfile);
 
 module.exports = router;

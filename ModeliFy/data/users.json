@@ -1,20 +1,28 @@
 [
-    {
-        "id": 1,
-        "nombre": "Juan",
-        "apellido": "Pérez",
-        "email": "juan.perez@example.com",
-        "contraseña": "password123",
-        "categoría": "usuario",
-        "avatar": "https://example.com/imagenes/juanperez.jpg"
-    },
-    {
-        "id": 2,
-        "nombre": "jose",
-        "apellido": "ramos",
-        "email": "jose.ramos@example.com",
-        "contraseña": "password456",
-        "categoría": "admin",
-        "avatar": "https://example.com/imagenes/mariagomez.jpg"
-    }
+ {
+  "id": 1,
+  "name": "Juan",
+  "lastname": "Pérez",
+  "email": "juan.perez@example.com",
+  "password": "password123",
+  "category": "usuario",
+  "avatar": "https://example.com/imagenes/juanperez.jpg"
+ },
+ {
+  "id": 2,
+  "name": "jose",
+  "lastname": "ramos",
+  "email": "jose.ramos@example.com",
+  "password": "password456",
+  "category": "admin",
+  "avatar": "https://example.com/imagenes/mariagomez.jpg"
+ },
+ {
+  "id": "",
+  "name": "jose",
+  "lastname": "ramos",
+  "email": "jose@gmail.com",
+  "password": "$2b$08$tWYvab3tdulHSmkSTD.UMuJo2BEBeRZgTWzh7vn0Qziutsz40Yq0y",
+  "avatar": "default.png"
+ }
 ]
