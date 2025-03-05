@@ -20,7 +20,7 @@ const usersControllers = {
             lastname: req.body.lastname,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 8),
-            avatar: 'default.png'
+            avatar: req.file?.filename || 'default.png'
         }
         users.push(newUser);
         fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));

@@ -13,18 +13,19 @@ const storageProd = multer.diskStorage({
   }
 })
 
-// const storageUser = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, path.join(__dirname, '../public/images/avatar') )
-//   },
-//   filename: function (req, file, cb) {
-//     const uniqueSuffix = 'mod-' + Date.now() + path.extname(file.originalname);
-//     cb(null, uniqueSuffix);
-//   }
-// })
+const storageUser = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, '../public/images/avatar/profiles') )
+  },
+  filename: function (req, file, cb) {
+  //   const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    const uniqueSuffix = 'avatar-' + Date.now() + path.extname(file.originalname);
+  //   cb(null, 'modelo' + '-' + uniqueSuffix)
+    cb(null, uniqueSuffix);
+  }
+})
 
 const uploadProd = multer({ storage: storageProd });
+const uploadUser = multer({ storage: storageUser });
 
-// const uploadProd = multer({ storage: storageProd });
-
-module.exports = {uploadProd};
+module.exports = {uploadProd, uploadUser};

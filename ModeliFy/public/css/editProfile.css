@@ -44,7 +44,7 @@ h1 {
     height: 70%;
     width: 40%;
     padding: 20px 20px 5px 20px;  
-    border: 2px solid #1a806f;
+    border: 2px solid #7e801a;
     border-radius: 50px;  
     text-align: center;  
     /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); */
@@ -86,7 +86,7 @@ input {
 
 input:focus {  
     outline: none;  
-    border-color: #007bff; /* Cambia el borde al enfocarse */  
+    border-color: #bbff00; /* Cambia el borde al enfocarse */  
 }  
 
 .register-button{  
@@ -109,10 +109,6 @@ input:focus {
     flex-wrap: wrap;
     margin-top: 3rem;
 }
-
-/* .login{
-    margin-top: 20px;
-} */
 
 a{
     text-decoration: none;

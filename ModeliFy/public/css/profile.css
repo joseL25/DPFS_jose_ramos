@@ -116,6 +116,39 @@ main{
     border-radius: 30px;
 }
 
+.profile-top{
+    width: 100%;
+}
+
+.profile-top img{
+    width: 100%;
+}
+
+.profile-central{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.profile-central .avatar{
+    width: 25%;
+}
+
+.avatar img{
+    width: 100%;
+}
+
+.dates{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2%;
+    height: auto;
+}
+
 .profile-branches{
     display: flex;
     justify-content: space-around;
