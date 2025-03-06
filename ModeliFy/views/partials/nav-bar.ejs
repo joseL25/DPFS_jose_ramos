@@ -15,10 +15,17 @@
         <a class="cart-conteiner" href="/cart">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
-
+        <% if (locals.isLogged) { %>
+            <a class="user-content" href="/users/profile">
+                <i class="fa-solid fa-circle-user"></i>
+                <!-- <i class="fa-solid fa-circle-xmark"></i> -->
+                <h3>mi cuenta</h3>
+            </a>
+        <% } else { %>
         <a class="user-content" href="/users/login">
             <i class="fa-solid fa-circle-user"></i>
             <h3>mi cuenta</h3>
         </a>
+        <% } %>
     </div>
 </nav>

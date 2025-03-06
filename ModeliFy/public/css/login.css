@@ -50,9 +50,9 @@ h1 {
 
 .form-container {  
     background-color: #1a1a1a; /* Gris claro */  
-    height: 70%;
+    height: auto;
     width: 40%;
-    padding: 20px;  
+    padding: 20px 20px 5px 20px;  
     border-radius: 50px;  
     text-align: center;  
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  */
@@ -102,4 +102,17 @@ input:focus {
 
 .register-button {  
     margin-top: 10px; /* Espacio entre los botones */  
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(226, 203, 253);
+    /* margin: 10px 0; */
 }

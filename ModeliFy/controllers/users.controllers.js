@@ -8,6 +8,27 @@ const usersControllers = {
     getLogin:(req,res)=>{
         res.render('../views/users/login');
     },
+    processLogin:(req,res)=>{
+        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+        let userToLogin = users.find((user)=> user.email == req.body.email);
+        if(userToLogin){
+            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(passwordOk){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                if(req.body.rememberme == "on"){
+                    res.cookie('email', userToLogin.email,{maxAge:(60*1000)*60});
+                }
+                res.redirect('/users/profile');
+            }
+        }
+        else{
+            console.log("los datos ingresados son incorrectos");
+            return res.redirect('/users/login');
+            
+        }
+        
+    },
     getRegister:(req,res)=>{
         res.render('../views/users/register');
     },
@@ -27,7 +48,15 @@ const usersControllers = {
         res.redirect('/');
     },
     getProfile:(req,res)=>{
-        res.render('../views/users/profile');
+        res.render('../views/users/profile', {user: req.session.userLogged});
+    },
+    editProfile:(req,res)=>{
+        res.render('../views/users/editProfile');
+    },
+    logout:(req,res)=>{
+        res.clearCookie('email');
+        req.session.destroy();
+        res.redirect('/');
     }
 }
 

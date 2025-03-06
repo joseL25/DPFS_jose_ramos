@@ -5,32 +5,25 @@
   "lastname": "Pérez",
   "email": "juan.perez@example.com",
   "password": "password123",
-  "category": "usuario",
+  "role": "user",
   "avatar": "https://example.com/imagenes/juanperez.jpg"
- },
- {
-  "id": 2,
-  "name": "jose",
-  "lastname": "ramos",
-  "email": "jose.ramos@example.com",
-  "password": "password456",
-  "category": "admin",
-  "avatar": "https://example.com/imagenes/mariagomez.jpg"
  },
  {
   "id": 3,
   "name": "jose",
   "lastname": "ramos",
-  "email": "jose@gmail.com",
-  "password": "$2b$08$tWYvab3tdulHSmkSTD.UMuJo2BEBeRZgTWzh7vn0Qziutsz40Yq0y",
-  "avatar": "default.png"
- },
- {
-  "id": 4,
-  "name": "jose",
-  "lastname": "ramos",
   "email": "ramos@gmail.com",
   "password": "$2b$08$3ggedjb7dnZgZn.1NDtgAOES/8XWu2ddwHmLFP2oHQej62.IlyC1O",
-  "avatar": "avatar-1741132087584.png"
+  "avatar": "avatar-1741132087584.png",
+  "role": "admin"
+ },
+ {
+  "id": 3,
+  "name": "albert",
+  "lastname": "einstein",
+  "email": "universo@gmail.com",
+  "password": "$2b$08$qo3C6aMht02pRk0LN3tpb.e3d3eR/w2m6DFU0siYjqRll5FuCn2uG",
+  "avatar": "avatar-1741220434732.png",
+  "role": "user"
  }
 ]

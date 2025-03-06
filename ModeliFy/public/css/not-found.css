@@ -4,7 +4,6 @@
 }
 a{
     text-decoration: none;
-    color: black;
 }
 
 body{  
@@ -54,8 +53,6 @@ body{
 
 .logos-nav{
     width: 300px;
-    /* width: 94px; */
-    /* width: auto; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -71,7 +68,6 @@ body{
 .logos-nav .user-content{
     display: flex;
     justify-content: start;
-    /* justify-content: space-between; */
     gap: 3%;
     text-decoration: none;
     background-color: #D2D2D2;
@@ -83,10 +79,6 @@ body{
     padding: 1% 1%;
 }
 
-/* .user-content:active{
-    visibility: hidden;
-} */
-
 .user-content:active{
     opacity: 0%;
 }
@@ -97,115 +89,26 @@ body{
 }
 /* Aqui termina la barra de navegacion */
 
-.name-user > h2{
-    color: whitesmoke;
-}
-
-.dat > h3{
-    color: whitesmoke;
-}
-
 main{
-    height: auto;
-    width: auto;
+    align-content: center;
+    height: 40rem;
 }
 
-.profile-section{
-    margin: 25px auto 0;
-    width: 95%;
-    height: 600px;
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
-    gap: 10px;
-}
-
-.profile{
-    height: 350px;
-    width: 300px;
-    background-color: #361534;
-    /* margin: 25px 0 60px 35px; */
-    border-radius: 30px;
-    padding: 2%;
-}
-
-/* .profile-top{
-    width: 100%;
-    background-image: url('../images/avatar/profile-top/profile-piece.jpg');
-    background-size: cover;
-} */
-
-/* .profile-top img{
-    max-width: 100%;
-} */
-
-.profile-central{
-    height: auto;
-    width: auto;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 5%;
-    align-items: center;
-    /* align-self: center; */
-    margin: 5% 0;
-    padding-left: 4%;
-}
-
-.profile-central .avatar{
-    width: 25%;
-}
-
-.avatar img{
-    width: 100%;
-}
-
-.dates{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2%;
-    height: auto;
-}
-
-.dat{
-    border: 1px solid rgb(255, 255, 255);
-    padding: 3%;
-    border-radius: 10px;
-    margin-bottom: 10%;
-}
-
-.option{
-    width: 95%;
-    border-radius: 15px;
-    border: 1px solid whitesmoke;
-    margin: 2% auto;
+.title{
     text-align: center;
-    padding: 2% 0;
 }
 
-.editProfile{
-    background-color: rgb(207, 187, 71);
+.title p{
+    font-size: 50px;
 }
 
-.logOut{
-    background-color: rgb(180, 0, 0);
+.image{
+    width: 600px;
+    margin: auto;
 }
 
-.profile-branches{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.branch{
-    width: 150px;
-    height: 60px;
-    background-color: #707070;
-    /* margin: 0 10px; */
-    border-radius: 10px;
+.image img{
+    width: 100%;
 }
 
 /* Aqui comienza el footer */
@@ -234,4 +137,3 @@ footer .follow i{
 ul{
     list-style-type: none;
 }
-/* Aqui termina el footer */
