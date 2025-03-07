@@ -30,10 +30,15 @@
                     </div>
                 </div>
                 <div class="option editProfile">
-                    <a href="/users/edit">Editar Perfil</a>
+                    <a href="/users/edit/<%= user.id %>">Editar Perfil</a>
                 </div>
                 <div class="option logOut">
                     <a href="/users/logout">Cerrar Sesion</a>
+                </div>
+                <div class="option destroy">
+                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="post">
+                        <button type="submit" class="button-destroy">Eliminar Cuenta</button>
+                    </form>
                 </div>
             </div>
 

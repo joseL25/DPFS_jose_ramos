@@ -40,12 +40,12 @@ app.use(userLogged);
 
 
 app.use("/",indexRouter);
-app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
+app.use("/users", usersRoutes);
 // app.use("/create", indexRouter);
 
 app.use(function(req,res){
-    res.status(404).render('not-found.ejs', {title:'no encontrado'})
+    res.status(404).render('not-found.ejs', {title:'VISTA NO ENCONTRADA'})
 });
 
 // vista del carrito

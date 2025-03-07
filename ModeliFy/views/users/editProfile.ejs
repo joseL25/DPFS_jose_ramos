@@ -16,16 +16,29 @@
             </div>
             <!-- <h1>Bienvenido</h1>   -->
             <p>Ingrese sus datos para usar las funciones del sitio</p>  
-            <form action="/users/register" method="post">  
+            <form action="/users/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">  
 
                 <div class="name-lastName">
-                    <input type="text" name="name" id="name" placeholder="nombre">
-                    <input type="text" name="lastname" id="lastname" placeholder="apellido">
+                    <input type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="nombre" 
+                    value="<%= user.name %>">
+
+                    <input type="text" 
+                    name="lastname" 
+                    id="lastname" 
+                    placeholder="apellido" 
+                    value="<%= user.lastname %>">
                 </div>
 
                 <div class="inputEmail">
                     <label for="email">Correo</label>  
-                    <input type="email" name="email" id="email" placeholder="Ingrese su correo" required>  
+                    <input type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Ingrese su correo" 
+                    value="<%= user.email %>" required>  
                 </div>
                 
                 <div class="inputPassword">
@@ -38,7 +51,7 @@
                     <input type="file" name="image" id="image">
                 </div>
                 
-                <button type="submit" class="register-button">Registrarse</button>  
+                <button type="submit" class="register-button">Actualizar</button>  
             </form>  
 
             <div class="options">
@@ -46,7 +59,7 @@
                     <a href="/users/login">Iniciar Sesion</a> 
                 </div>
                 <div>
-                    <a href="/">Volver al Inicio</a>
+                    <a href="/users/profile">Volver</a>
                 </div>
             </div>
         </div>  

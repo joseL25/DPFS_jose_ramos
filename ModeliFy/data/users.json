@@ -1,15 +1,6 @@
 [
  {
   "id": 1,
-  "name": "Juan",
-  "lastname": "Pérez",
-  "email": "juan.perez@example.com",
-  "password": "password123",
-  "role": "user",
-  "avatar": "https://example.com/imagenes/juanperez.jpg"
- },
- {
-  "id": 3,
   "name": "jose",
   "lastname": "ramos",
   "email": "ramos@gmail.com",
@@ -18,12 +9,28 @@
   "role": "admin"
  },
  {
-  "id": 3,
+  "id": 2,
   "name": "albert",
   "lastname": "einstein",
   "email": "universo@gmail.com",
   "password": "$2b$08$qo3C6aMht02pRk0LN3tpb.e3d3eR/w2m6DFU0siYjqRll5FuCn2uG",
   "avatar": "avatar-1741220434732.png",
   "role": "user"
+ },
+ {
+  "id": 3,
+  "name": "marie",
+  "lastname": "curie",
+  "email": "radio@gmail.com",
+  "password": "$2b$08$gSfppDWmiYCPvlTcLTAeUOCvwdfEj7etZqnCmT9oJAkJqFyiGmVWK",
+  "avatar": "avatar-1741299601348.png"
+ },
+ {
+  "id": 4,
+  "name": "charles",
+  "lastname": "chaplin",
+  "email": "comedia@gmail.com",
+  "password": "risas123456",
+  "avatar": "avatar-1741300944311.png"
  }
 ]

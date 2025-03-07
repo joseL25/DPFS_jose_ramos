@@ -19,7 +19,7 @@ const usersControllers = {
                 if(req.body.rememberme == "on"){
                     res.cookie('email', userToLogin.email,{maxAge:(60*1000)*60});
                 }
-                res.redirect('/users/profile');
+                return res.redirect('/users/profile');
             }
         }
         else{
@@ -51,7 +51,46 @@ const usersControllers = {
         res.render('../views/users/profile', {user: req.session.userLogged});
     },
     editProfile:(req,res)=>{
-        res.render('../views/users/editProfile');
+        // const {id} = req.params;
+        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+        let userFound = users.find((user)=> user.id == req.params.id);
+        // let userFound = User.findById(req.params.id);
+        if(userFound){
+            return res.render('../views/users/editProfile',{ user: userFound });
+        }
+        res.status(404).render('not-found.ejs', {title:'USUARIO NO ENCONTRADO'});
+    },
+    processUpdate:(req,res)=>{
+        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+        let userFound = users.find((user)=> user.id == req.params.id);
+
+        userFound.name = req.body.name
+        userFound.lastname = req.body.lastname
+        userFound.email = req.body.email
+        userFound.password = req.body.password == "" ? userFound.password: bcryptjs.hashSync(req.body.password, 10);
+        userFound.avatar = req.file?.filename || userFound.avatar
+        
+        fs.writeFileSync(usersPath, JSON.stringify(users,null, " "));
+        req.session.userLogged = userFound;
+        res.redirect('/');
+    },
+    destroy:(req,res)=>{
+        //1. traer el listado de productos en una variable
+        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+        //2. eliminar la imagen
+        let userToDelete = users.find((user) => user.id == req.params.id);
+        if (userToDelete.avatar != "default.png") {
+            fs.unlinkSync(path.join(__dirname,`../public/images/avatar/profiles/${userToDelete.avatar}`));
+        }
+        //3. actualizar el listado excluyendo el que coincide con el id a eliminar
+        users = users.filter((user) => user.id != req.params.id);
+        //4. reescribir el json
+        fs.writeFileSync(usersPath, JSON.stringify(users,null," "));
+        //5. Limpiar sesion y cookies
+        res.clearCookie('email');
+        req.session.destroy();
+        //6. redireccionar
+        res.redirect('/');
     },
     logout:(req,res)=>{
         res.clearCookie('email');
