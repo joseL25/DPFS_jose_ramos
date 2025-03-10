@@ -24,24 +24,26 @@ const usersControllers = {
                     }
                     return res.redirect('/users/profile');
                 } else{
-                    return res.redirect('/users/login',{
+                    return res.render('../views/users/login',{
                         errors: {
                             password: {
                                 msg: 'Las credenciales son invalidas',
                             },
+                            // old: req.body,
                         },
                         old: req.body,
                     });
                 }
             } else{
                 // console.log("los datos ingresados son incorrectos");
-                return res.redirect('/users/login',{
+                return res.render('../views/users/login',{
                     errors: {
                         password: {
                             msg: 'Las credenciales son invalidas',
                         },
+                        old: req.body,
                     },
-                    old: req.body,
+                    // old: req.body,
                 });
             }
         } else{
