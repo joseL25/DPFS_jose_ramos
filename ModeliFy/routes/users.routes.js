@@ -12,11 +12,12 @@ const router = express.Router();
 const {uploadUser} = require('../middlewares/multer');
 const loggedMidleware = require("../middlewares/loggedMiddleware");
 const guestAuth = require("../middlewares/guestAuth");
+const { loginCheck } = require("../middlewares/validator");
 
 
 // vista de login
 router.get('/login', loggedMidleware, getLogin);
-router.post('/login', processLogin);
+router.post('/login', loginCheck, processLogin);
 
 //vista de register
 router.get('/register', getRegister);
@@ -24,6 +25,7 @@ router.post('/register',uploadUser.single('image'), processRegister);
 
 //vista de perfil
 router.get('/profile',guestAuth, getProfile);
+
 //vista de edicion de perfil
 router.get('/edit/:id', guestAuth, editProfile);
 router.put('/edit/:id', uploadUser.single('image'), processUpdate);

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require('express-validator');
 
 const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 const bcryptjs = require('bcryptjs');
@@ -9,24 +10,46 @@ const usersControllers = {
         res.render('../views/users/login');
     },
     processLogin:(req,res)=>{
-        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-        let userToLogin = users.find((user)=> user.email == req.body.email);
-        if(userToLogin){
-            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(passwordOk){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                if(req.body.rememberme == "on"){
-                    res.cookie('email', userToLogin.email,{maxAge:(60*1000)*60});
+        const resultValidator = validationResult(req);
+        if(resultValidator.isEmpty()){
+            let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+            let userToLogin = users.find((user)=> user.email == req.body.email);
+            if(userToLogin){
+                let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if(passwordOk){
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    if(req.body.rememberme == "on"){
+                        res.cookie('email', userToLogin.email,{maxAge:(60*1000)*60});
+                    }
+                    return res.redirect('/users/profile');
+                } else{
+                    return res.redirect('/users/login',{
+                        errors: {
+                            password: {
+                                msg: 'Las credenciales son invalidas',
+                            },
+                        },
+                        old: req.body,
+                    });
                 }
-                return res.redirect('/users/profile');
+            } else{
+                // console.log("los datos ingresados son incorrectos");
+                return res.redirect('/users/login',{
+                    errors: {
+                        password: {
+                            msg: 'Las credenciales son invalidas',
+                        },
+                    },
+                    old: req.body,
+                });
             }
+        } else{
+            return res.render('../views/users/login',{
+                errors: resultValidator.mapped(), old: req.body,
+            });
         }
-        else{
-            console.log("los datos ingresados son incorrectos");
-            return res.redirect('/users/login');
-            
-        }
+
         
     },
     getRegister:(req,res)=>{

@@ -68,6 +68,13 @@ p {
     margin-bottom: 20px;  
 }  
 
+.error{
+    position: relative;
+    bottom: 18px;
+    color: red;
+    text-shadow: 0 0px 10px rgb(175, 2, 7);
+}
+
 label {  
     display: block;  
     margin: 10px 0 5px; /* Espacio entre la etiqueta y el campo */  
