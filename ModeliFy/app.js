@@ -45,15 +45,14 @@ app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 // app.use("/create", indexRouter);
 
-app.use(function(req,res){
-    res.status(404).render('not-found.ejs', {title:'VISTA NO ENCONTRADA'})
-});
-
 // vista del carrito
 app.get('/cart',(req,res)=>{
     res.render('cart.ejs');
 });
 
+app.use(function(req,res){
+    res.status(404).render('not-found.ejs', {title:'VISTA NO ENCONTRADA'})
+});
 
 
 
