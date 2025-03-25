@@ -1,14 +1,18 @@
 * {  
-    box-sizing: border-box;  
+    box-sizing: border-box;
     margin: 0;  
     padding: 0;  
 }  
 
 body {  
-    font-family: Arial, sans-serif;  
     /* background-color: #322c36;  */
     background-color: #000000; 
     color: #fff; 
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }  
 
 a{
@@ -17,10 +21,10 @@ a{
 
 .container {  
     display: flex;  
-    /* flex-direction: column;   */
+    /* flex-direction: column; */
     align-items: center;  
     justify-content: center;  
-    height: calc(100vh - 60px); 
+    height: auto; 
 }  
 
 .form-container{
@@ -49,24 +53,25 @@ h1 {
 }  
 
 .form-container {  
+    font-family: Arial, sans-serif;
     background-color: #1a1a1a; /* Gris claro */  
     height: auto;
-    width: 40%;
+    width: 100%;
     padding: 20px 20px 5px 20px;  
     border-radius: 50px;  
     text-align: center;  
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  */
     box-shadow: 0 0px 20px rgb(87, 0, 128); 
     border: 2px solid rgb(87, 0, 128);
-}  
+}
 
 h2 {  
     margin-bottom: 15px;  
-}  
+}
 
 p {  
     margin-bottom: 20px;  
-}  
+}
 
 .error{
     position: relative;
@@ -78,7 +83,7 @@ p {
 label {  
     display: block;  
     margin: 10px 0 5px; /* Espacio entre la etiqueta y el campo */  
-}  
+}
 
 input {  
     width: 50%;  
@@ -86,13 +91,13 @@ input {
     margin-bottom: 20px;  
     border: 1px solid #ccc;  
     border-radius: 10px;  
-}  
+}
 
 input:focus {  
     outline: none;  
     border-color: #67539c; /* Cambia el borde al enfocarse */  
     border: 2px solid;
-}  
+}
 
 .login-button, .register-button {  
     background-color: #000; /* Negro */  
@@ -101,11 +106,11 @@ input:focus {
     padding: 10px 20px;  
     border-radius: 5px;  
     cursor: pointer;  
-}  
+}
 
 .login-button:hover, .register-button:hover {  
     background-color: #444; /* Gris oscuro al pasar el mouse */  
-}  
+}
 
 .register-button {  
     margin-top: 10px; /* Espacio entre los botones */  
