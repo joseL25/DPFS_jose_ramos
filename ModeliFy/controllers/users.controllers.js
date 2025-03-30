@@ -4,6 +4,7 @@ const { validationResult } = require('express-validator');
 
 const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 const bcryptjs = require('bcryptjs');
+const User = require("../services/user");
 
 const usersControllers = {
     getLogin:(req,res)=>{
@@ -12,8 +13,8 @@ const usersControllers = {
     processLogin:(req,res)=>{
         const resultValidator = validationResult(req);
         if(resultValidator.isEmpty()){
-            let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-            let userToLogin = users.find((user)=> user.email == req.body.email);
+            // let users = User.findAll();
+            let userToLogin = User.findByField('email', req.body.email);
             if(userToLogin){
                 let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
                 if(passwordOk){
@@ -43,7 +44,6 @@ const usersControllers = {
                         },
                         old: req.body,
                     },
-                    // old: req.body,
                 });
             }
         } else{
@@ -58,7 +58,7 @@ const usersControllers = {
         res.render('../views/users/register');
     },
     processRegister:(req,res)=>{
-        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+        let users = findAll();
 
         let newUser = {
             id: users.length + 1,
@@ -76,9 +76,7 @@ const usersControllers = {
         res.render('../views/users/profile', {user: req.session.userLogged});
     },
     editProfile:(req,res)=>{
-        // const {id} = req.params;
-        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-        let userFound = users.find((user)=> user.id == req.params.id);
+        let userFound = User.findById(req.params.id);
         // let userFound = User.findById(req.params.id);
         if(userFound){
             return res.render('../views/users/editProfile',{ user: userFound });
@@ -86,8 +84,8 @@ const usersControllers = {
         res.status(404).render('not-found.ejs', {title:'USUARIO NO ENCONTRADO'});
     },
     processUpdate:(req,res)=>{
-        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-        let userFound = users.find((user)=> user.id == req.params.id);
+        let users = JSON.parse(fs.readFileSync(usersPath,'utf-8'));
+        let userFound = User.findById(req.params.id);
 
         userFound.name = req.body.name
         userFound.lastname = req.body.lastname
@@ -100,21 +98,19 @@ const usersControllers = {
         res.redirect('/');
     },
     destroy:(req,res)=>{
-        //1. traer el listado de productos en una variable
-        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-        //2. eliminar la imagen
-        let userToDelete = users.find((user) => user.id == req.params.id);
+        //1. eliminar la imagen
+        let userToDelete = User.findById(req.params.id);
         if (userToDelete.avatar != "default.png") {
             fs.unlinkSync(path.join(__dirname,`../public/images/avatar/profiles/${userToDelete.avatar}`));
         }
-        //3. actualizar el listado excluyendo el que coincide con el id a eliminar
+        //2. actualizar el listado excluyendo el que coincide con el id a eliminar
         users = users.filter((user) => user.id != req.params.id);
-        //4. reescribir el json
+        //3. reescribir el json
         fs.writeFileSync(usersPath, JSON.stringify(users,null," "));
-        //5. Limpiar sesion y cookies
+        //4. Limpiar sesion y cookies
         res.clearCookie('email');
         req.session.destroy();
-        //6. redireccionar
+        //5. redireccionar
         res.redirect('/');
     },
     logout:(req,res)=>{

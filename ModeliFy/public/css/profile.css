@@ -124,7 +124,8 @@ main{
     justify-content: space-around;
     align-items: start;
     gap: 10px;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
+    background-color: #562c7e;
     border-radius: 25px;
     /* box-shadow: 0 0 30px rgb(73, 51, 114); */
     border: 1px solid rgb(98, 0, 128);
