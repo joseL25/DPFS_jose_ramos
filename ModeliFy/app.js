@@ -3,7 +3,8 @@ const methodOverride = require("method-override");
 const path = require("path");
 const app = express();
 const session = require("express-session");
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
+const guestAuth = require("./middlewares/guestAuth");
 
 
 const port = 3000;
@@ -46,7 +47,7 @@ app.use("/users", usersRoutes);
 // app.use("/create", indexRouter);
 
 // vista del carrito
-app.get('/cart',(req,res)=>{
+app.get('/cart', guestAuth,(req,res)=>{
     res.render('cart.ejs');
 });
 

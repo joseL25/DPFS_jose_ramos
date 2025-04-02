@@ -6,47 +6,52 @@
 
     <main>
         <div class="profile-section">
-            <div class="profile">
-                <div class="profile-top">
-                    <!-- <img src="/images/avatar/profile-top/profile-piece.jpg" alt="#"> -->
-                </div>
-                <div class="profile-central">
-                    <div class="avatar">
-                        <img src="/images/avatar/profiles/<%= user.avatar %>" alt="default">
-                    </div>
-                    <div class="name-user">
-                        <h2><%= user.name + " " + user.lastname %></h2>
-                    </div>
-                </div>
-                <div class="dates">
-                    <div class="dat follow">
-                        <h3>Seguidores</h3>
-                    </div>
-                    <div class="dat following">
-                        <h3>Siguiendo</h3>
-                    </div>
-                    <div class="dat design">
-                        <h3>Diseños</h3>
-                    </div>
-                </div>
-                <div class="option editProfile">
-                    <a href="/users/edit/<%= user.id %>">Editar Perfil</a>
-                </div>
-                <div class="option logOut">
-                    <a href="/users/logout">Cerrar Sesion</a>
-                </div>
-                <div class="option destroy">
-                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="post">
-                        <button type="submit" class="button-destroy">Eliminar Cuenta</button>
-                    </form>
-                </div>
+            <div class="banner-profile">
+                <img src="/images/banner/Default_Banner.jpg" alt="Banner">
             </div>
-
-            <div class="profile-branches">
-                <div class="branch 1"></div>
-                <div class="branch 2"></div>
-                <div class="branch 3"></div>
-                <div class="branch 4"></div>
+            <div class="profile-bottom">
+                <div class="profile">
+                    <!-- <div class="profile-top"> -->
+                        <!-- <img src="/images/avatar/profile-top/profile-piece.jpg" alt="#"> -->
+                    <!-- </div> -->
+                    <div class="profile-central">
+                        <div class="avatar">
+                            <img src="/images/avatar/profiles/<%= user.avatar %>" alt="default">
+                        </div>
+                        <div class="name-user">
+                            <h2><%= user.name + " " + user.lastname %></h2>
+                        </div>
+                    </div>
+                    <div class="dates">
+                        <div class="dat follow">
+                            <h3>Seguidores</h3>
+                        </div>
+                        <div class="dat following">
+                            <h3>Siguiendo</h3>
+                        </div>
+                        <div class="dat design">
+                            <h3>Diseños</h3>
+                        </div>
+                    </div>
+                    <div class="option editProfile">
+                        <a href="/users/edit/<%= user.id %>">Editar Perfil</a>
+                    </div>
+                    <div class="option logOut">
+                        <a href="/users/logout">Cerrar Sesion</a>
+                    </div>
+                    <div class="option destroy">
+                        <form action="/users/delete/<%= user.id %>?_method=DELETE" method="post">
+                            <button type="submit" class="button-destroy">Eliminar Cuenta</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="profile-branches">
+                    <div class="branch 1"></div>
+                    <div class="branch 2"></div>
+                    <div class="branch 3"></div>
+                    <div class="branch 4"></div>
+                </div>
             </div>
         </div>
     </main>

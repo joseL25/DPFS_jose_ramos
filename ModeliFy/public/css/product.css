@@ -6,7 +6,7 @@
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #f0f0f0;  
+    background-color: #000000;  
 }  
 
 a{
@@ -19,8 +19,13 @@ a{
     height: auto;
     display: flex;
     justify-content: space-between;
-    background-color: #161920;
+    background-color: #000000;
     align-items: center;
+    border: 1px solid rgb(126, 65, 206);
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    box-shadow: 0 0px 20px rgb(185, 131, 255);
 }
 
 .log-page{
@@ -187,9 +192,10 @@ a{
 
 .comments-section {  
     background-color: #6a1b9a;  
+    width: 95%;
     color: white;  
     padding: 20px;  
-    margin: 20px;  
+    margin: 20px auto;  
     border-radius: 8px;  
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
 }  
