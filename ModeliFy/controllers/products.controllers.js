@@ -1,17 +1,19 @@
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models");
+
 
 const modelsPath = path.join(__dirname, '..', 'data', 'products.json');
 
 module.exports = {
-    product: (req, res) => {
-        let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
-        const modelFound = models.find((model) => model.id == req.params.id);
-        
-        // let products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
-        // let prodFound = products.find((prod) => prod.id == req.params.id);
-        
-        res.render('products/detail', { modelFound });
+    product: async(req, res) => {
+        try {
+            const modelFound = await db.Product.findByPk(req.params.id);
+            
+            res.render('products/detail', { modelFound });  
+        } catch (error) {
+            console.log(error);
+        }
     },
     create: (req, res) => {
         // let models = JSON.parse(fs.readFileSync(modelsPath,'utf-8'));
@@ -38,9 +40,9 @@ module.exports = {
 
         res.redirect("/");
     },
-    edit: (req, res) => {
-        let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
-        let modelEdit = models.find((model) => model.id == req.params.id);
+    edit: async(req, res) => {
+        // let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
+        let modelEdit = await db.Product.findByPk(req.params.id)
 
         res.render("products/edit",{modelEdit});
     },
@@ -58,18 +60,18 @@ module.exports = {
         fs.writeFileSync(modelsPath, JSON.stringify(models,null, " "));
         res.redirect('/');
     },
-    destroy:(req,res)=>{
-        //1. traer el listado de productos en una variable
-        let models = JSON.parse(fs.readFileSync(modelsPath, 'utf-8'));
-        //2. eliminar la imagen
-        let modelToDelete = models.find((model) => model.id == req.params.id);
-        if (modelToDelete.image != "default.png") {
-            fs.unlinkSync(path.join(__dirname,`../public/images/modelos/${modelToDelete.imagen}`));
-        }
-        //3. actualizar el listado excluyendo el que coincide con el id a eliminar
-        models = models.filter((model) => model.id != req.params.id);
-        //4. reescribir el json
-        fs.writeFileSync(modelsPath, JSON.stringify(models,null," "));
+    destroy:async(req,res)=>{
+        //OPCIONAL
+        // let modelToDelete = await db.Product.findByPk(req.params.id);
+        // if (modelToDelete.image != "default.png") {
+        //     fs.unlinkSync(path.join(__dirname,`../public/images/modelos/${modelToDelete.imagen}`));
+        // }
+        const modelDelete = await db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        console.log('modelo borrado', modelDelete);
         //5. redireccionar
         res.redirect('/');
     }

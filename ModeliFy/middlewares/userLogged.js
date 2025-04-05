@@ -7,7 +7,7 @@ function userLogged (req,res,next){
     if(req.session && req.session?.userLogged){
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
-        req.session?.userLogged.role == "admin" ? (res.locals.isAdmin = true): null;
+        req.session?.userLogged.role == 1 ? (res.locals.isAdmin = true): null;
     }
 
     if(!req.session?.userLogged && req.cookies?.email){

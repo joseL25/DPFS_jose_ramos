@@ -11,6 +11,7 @@ body{
     /* overflow: hidden; */
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Comienza la barra de navegacion */
@@ -29,6 +30,10 @@ body{
 .icon-logo-page{
     width: 100%;
     /* height: 40%; */
+}
+
+nav > form{
+    width: 40%;
 }
 
 .search-container{
@@ -80,7 +85,11 @@ body{
 }
 
 .user-content:active{
-    opacity: 0%;
+    width: auto;
+    transition: width .8s ease-in;
+}
+.logos-nav a h3:active{
+    display: none;
 }
 
 
@@ -105,10 +114,17 @@ source{
 .title{
     position: absolute;
     color: rgb(143, 137, 137);
+    width: 100%;
     text-align: center;
-    font-size: 80px;
+    /* top: 40%; */
     top: 40%;
-    right: 30%;
+    /* right: 30%; */
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.title > h1{
+    font-size: 5rem;
 }
 
 .second-piece{
@@ -153,7 +169,7 @@ source{
     width: 23%;
     background-color: rgb(40, 0, 114);
     border: solid 1px white;
-    margin: 15px 10px;
+    margin: 15px 9px;
     display: inline-block;
     /* margin-bottom: 50px; */
     /* height: 330px; */
@@ -402,4 +418,64 @@ footer .follow i{
 
 ul{
     list-style-type: none;
+}
+
+@media (max-width: 320px) {
+    /* Aqui comienza la barra de navegacion */
+    .log-page{
+        width: 3rem;  
+    }
+
+    .search-container{
+        /* width: max-content; */
+        width: 100px;
+        display: flex;
+        padding: 0px 10px;
+        border-radius: 28px;
+        background-color: #f6f6f6;
+        align-items: center;
+    }
+
+    nav > form{
+        width: 35%;
+        height: 20%;
+    }
+    .search-input{
+        visibility: hidden;
+    }
+    .logos-nav{
+        width: 100px;
+    }
+    .logos-nav a i{
+        font-size: 20px;
+        padding-left: 2px;
+        padding-top: 1px;
+    }
+    .logos-nav a h3{
+        font-size: 12px;
+        visibility: hidden;
+        display: none;
+    }
+    
+    .logos-nav .user-content{
+        gap: 1%;
+        background-color: #D2D2D2;
+        color: black;
+        height: auto;
+        width: auto;
+        border-radius: 25px;
+        align-items: center;
+        padding: 1% 1%;
+    }
+
+    /* Aqui termina la barra de navegacion */
+
+    .title{
+        top: 15%;
+        height: 40px;
+    }
+    .title > h1{
+        font-size: 2rem;
+        /* color: #000; */
+    }
 }

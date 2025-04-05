@@ -17,6 +17,7 @@ const indexRouter = require("./routes/index.routes");
 const usersRoutes = require('./routes/users.routes');
 const productsRoutes = require('./routes/products.routes');
 const userLogged = require('./middlewares/userLogged');
+const db = require('./database/models');
 // const { title } = require('process');
 
 // ejs config
@@ -58,4 +59,10 @@ app.use(function(req,res){
 
 
 
-app.listen(port, ()=>console.log("Servidor corriendo en el puerto: http://localhost:" + port))
+app.listen(port, async()=>console.log(
+
+    // await db.sequelize.sync({force: true}),
+    // console.log('All models were synchronized successfully'),
+
+    "Servidor corriendo en el puerto: http://localhost:" + port
+))

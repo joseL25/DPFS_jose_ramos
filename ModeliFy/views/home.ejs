@@ -9,7 +9,9 @@
             <video class="videoFirst-piece" autoplay loop muted>
                 <source src="videos/videoSeccion1_op02.mp4" type="video/mp4">
             </video>
-            <h1 class="title">BIENVENIDO</h1>
+            <div class="title">
+                <h1>BIENVENIDO</h1>
+            </div>
 
         </section>
 
@@ -37,7 +39,7 @@
         </section>
         <main class="products">
 
-            <% models.forEach(model => { %>
+            <!-- <% models.forEach(model => { %> -->
             
                 <div class="product-content">
                     <div class="product-dat-sup">
@@ -64,7 +66,7 @@
                     </div>
                 </div>
 
-            <% }) %>
+            <!-- <% }) %> -->
 
         </main>
 
@@ -127,6 +129,7 @@
         </section>
 
         <%- include('./partials/footer.ejs') %>
+        <script src="/js/home.js"></script>
     </body>
 
 </html>
