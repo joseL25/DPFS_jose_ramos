@@ -49,10 +49,9 @@
                 <div class="input-content">
                     <select name="category" id="category">
                         <option selected disabled>tipo de modelo</option>
-                        <option value="esculpido">esculpido</option>
-                        <option value="solido">solido</option>
-                        <option value="superficie">superficie</option>
-                        <option value="procedimental">procedimental</option>
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.name %></option>
+                        <% }) %>
                     </select>
                 </div>
             </div>
@@ -64,11 +63,9 @@
                 <div class="input-content">
                     <select name="file" id="file">
                         <option selected disabled>tipo de archivo</option>
-                        <option value="OBJ">OBJ</option>
-                        <option value="FBX">FBX</option>
-                        <option value="STL">STL</option>
-                        <option value="IGES">IGES</option>
-                        <option value="AMF">AMF</option>
+                        <% files.forEach(file => { %>
+                            <option value="<%= file.id %>"><%= file.name %></option>
+                        <% }) %>
                     </select>
                 </div>
             </div>

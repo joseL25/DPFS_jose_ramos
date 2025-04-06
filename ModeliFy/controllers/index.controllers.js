@@ -7,7 +7,9 @@ const modelsPath = path.join(__dirname,'..','data','products.json');
 const indexController = {
     gethome: async(req,res)=>{
         try {
-            const models = await db.Product.findAll();
+            const models = await db.Product.findAll(
+                {include:["categories","files"]}
+            );
             // console.log(productsDB);
 
             // const models = JSON.parse(fs.readFileSync(products,'utf-8'));

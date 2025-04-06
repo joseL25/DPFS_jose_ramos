@@ -29,7 +29,9 @@
                     <label for="description">Descripcion</label>
                 </div>
                 <div class="input-content">
-                    <textarea name="description" id="description" placeholder="de que trata el modelo?"><%= modelEdit.description %></textarea><br>
+                    <textarea name="description" 
+                    id="description" 
+                    placeholder="de que trata el modelo?"><%= modelEdit.description %></textarea><br>
                 </div>
             </div>
             
@@ -49,10 +51,11 @@
                 <div class="input-content">
                     <select name="category" id="category">
                         <option selected disabled>tipo de modelo</option>
-                        <option value="esculpido">esculpido</option>
-                        <option value="solido">solido</option>
-                        <option value="superficie">superficie</option>
-                        <option value="procedimental">procedimental</option>
+                        <% categories.forEach(item => { %>
+                            <option value="<%= item.id %>" <%= modelEdit.category_id == item.id ? "selected" : "" %>>
+                                <%= item.name %>
+                            </option>
+                        <% }) %>
                     </select>
                 </div>
             </div>
@@ -64,7 +67,11 @@
                 <div class="input-content">
                     <select name="category" id="category">
                         <option selected disabled>tipo de archivo</option>
-                        <option value="OBJ">OBJ</option>
+                        <% files.forEach(item => { %>
+                            <option value="<%= item.id %>" <%= modelEdit.file_id == item.id ? "selected" : ""%>>
+                                <%= item.name %>
+                            </option>
+                        <% }) %>
                         <option value="FBX">FBX</option>
                         <option value="STL">STL</option>
                         <option value="IGES">IGES</option>

@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes)=> {
             }
         },
         description: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(255)
         },
         price: {
             type: DataTypes.INTEGER(11)
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes)=> {
             type: DataTypes.STRING(255)
         },
         file: {
-            type: DataTypes.STRING(255)
+            type: DataTypes.STRING(100)
         },
         image: {
             type: DataTypes.STRING

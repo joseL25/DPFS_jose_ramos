@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require('express-validator');
 
-const usersPath = path.join(__dirname, '..', 'data', 'users.json');
+// const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 const bcryptjs = require('bcryptjs');
-const User = require("../services/user");
+// const User = require("../services/user");
 const db = require('../database/models')
 
 const usersControllers = {
@@ -124,16 +124,18 @@ const usersControllers = {
         req.session.userLogged = userFound;
         res.redirect('/');
     },
-    destroy:(req,res)=>{
+    destroy: async(req,res)=>{
         //1. eliminar la imagen
-        let userToDelete = User.findById(req.params.id);
+        let userToDelete = await db.User.findByPk(req.params.id);
         if (userToDelete.avatar != "default.png") {
             fs.unlinkSync(path.join(__dirname,`../public/images/avatar/profiles/${userToDelete.avatar}`));
         }
-        //2. actualizar el listado excluyendo el que coincide con el id a eliminar
-        users = users.filter((user) => user.id != req.params.id);
-        //3. reescribir el json
-        fs.writeFileSync(usersPath, JSON.stringify(users,null," "));
+        
+        await db.User.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
         //4. Limpiar sesion y cookies
         res.clearCookie('email');
         req.session.destroy();

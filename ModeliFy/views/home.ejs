@@ -39,7 +39,7 @@
         </section>
         <main class="products">
 
-            <!-- <% models.forEach(model => { %> -->
+            <% models.forEach(model => { %>
             
                 <div class="product-content">
                     <div class="product-dat-sup">
@@ -55,7 +55,7 @@
                     </div>
                     
                     <a href="/products/detail/<%= model.id %>">
-                        <img class="model" src="images/modelos/<%= model.imagen %>" alt="<%= model.name %>">
+                        <img class="model" src="./images/modelos/<%= model.image %>" alt="<%= model.name %>">
                     </a>
                     <div class="product-dat-inf">
                         <i class="fa-solid fa-cart-plus"></i>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
 
-            <!-- <% }) %> -->
+            <% }) %>
 
         </main>
 
