@@ -1,8 +1,8 @@
-const fs = require("fs");
-const path = require("path");
+// const fs = require("fs");
+// const path = require("path");
 const db = require('../database/models');
 
-const modelsPath = path.join(__dirname,'..','data','products.json');
+// const modelsPath = path.join(__dirname,'..','data','products.json');
 
 const indexController = {
     gethome: async(req,res)=>{
@@ -11,8 +11,6 @@ const indexController = {
                 {include:["categories","files"]}
             );
             // console.log(productsDB);
-
-            // const models = JSON.parse(fs.readFileSync(products,'utf-8'));
     
             res.render("home.ejs",{ models }); 
         } catch (error) {
