@@ -45,7 +45,6 @@ app.use(userLogged);
 app.use("/",indexRouter);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-// app.use("/create", indexRouter);
 
 // vista del carrito
 app.get('/cart', guestAuth,(req,res)=>{
