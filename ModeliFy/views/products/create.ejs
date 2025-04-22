@@ -15,13 +15,14 @@
             <img src="../images/cubo.png" alt="cubo">
         </div>
 
-        <form class="form-dat" action="/products/create" method="post" enctype="multipart/form-data">
+        <form class="form-dat" action="/products/create" method="post" enctype="multipart/form-data" id="formulario" novalidate>
             <div class="input-inf">
                 <div class="content-label">
                     <label for="name">Nombre</label>
                 </div>
                 <div class="input-content">
                     <input type="text" name="name" placeholder="modelo 3d" id="name" required>
+                    <div class="error"></div>
                 </div>
             </div>
             <div class="input-inf">
@@ -86,6 +87,7 @@
     </main>
 
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/create.js"></script>
 </body>
 
 </html>

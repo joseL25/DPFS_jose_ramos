@@ -11,6 +11,11 @@
             </video>
             <div class="title">
                 <h1>BIENVENIDO</h1>
+                <% if (locals.isLogged) { %>
+                    <% if (locals.isAdmin) { %>
+                        <a class="a-admin" href="/admin">Administrar</a>
+                    <% } %>
+                <% } %>
             </div>
 
         </section>

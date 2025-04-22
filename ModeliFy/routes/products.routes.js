@@ -4,7 +4,7 @@ const { product,
         edit, 
         save,
         update,
-        destroy } = require("../controllers/products.controllers");
+        destroy } = require("../controllers/products.controller");
 // const path = require("path");
 // const multer = require("multer");
 const upload = require("../middlewares/multer.js");

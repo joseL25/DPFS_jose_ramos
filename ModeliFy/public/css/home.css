@@ -127,6 +127,15 @@ source{
     font-size: 5rem;
 }
 
+.a-admin{
+    color: #9894c5;
+    font-size: 20px;
+    background-color: #161920;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid rgb(111, 29, 179);
+}
+
 .second-piece{
     height: 60px;
 }

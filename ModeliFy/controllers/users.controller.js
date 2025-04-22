@@ -146,7 +146,10 @@ const usersControllers = {
         res.clearCookie('email');
         req.session.destroy();
         res.redirect('/');
-    }
+    },
+    // adminP:(req,res)=>{
+    //     res.render('../views/users/adminP')
+    // }
 }
 
 module.exports = usersControllers;

@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+// const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 
 function userLogged (req,res,next){

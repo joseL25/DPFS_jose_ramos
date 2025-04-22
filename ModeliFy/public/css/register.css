@@ -55,6 +55,12 @@ h1 {
     /* align-content: center; */
 }  
 
+.error{
+    color: red;
+    font-size: 15px;
+    /* width: 90%; */
+}
+
 .name-lastName{
     display: flex;
     justify-content: space-around;
@@ -63,7 +69,7 @@ h1 {
 }
 
 .name-lastName input{
-    width: 40%;
+    width: 100%;
 }
 
 h2 {  
@@ -80,16 +86,16 @@ label {
 }  
 
 input {  
-    width: 50%;  
-    padding: 10px;  
-    margin-bottom: 20px;  
-    border: 1px solid #ccc;  
-    border-radius: 5px;  
-}  
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 input:focus {  
     outline: none;  
-    border-color: #007bff; /* Cambia el borde al enfocarse */  
+    border-color: #00ffd5; /* Cambia el borde al enfocarse */  
 }  
 
 .register-button{  

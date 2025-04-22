@@ -104,7 +104,8 @@ a{
 }  
 
 .product-image {  
-    width: 40%; 
+    /* width: 70%; */
+    width: 400px;
     display: inline-block;
 }  
 
@@ -112,6 +113,7 @@ a{
     width: 100%;  
     height: auto;  
     border-radius: 10px;
+    object-fit: contain;
 }  
 
 .product-info {  
@@ -153,12 +155,13 @@ a{
 
 /* Aqui comienza las opciones de edicion del lado del backend */
 .option-data{
-    /* border: 1px solid black;
-    position: relative;
-    left: 30%; */
-    margin: 0 2% 0 25%;
-    display: flex;
-    flex-direction: column;
+    margin: 0 2% 0 12%;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.option-data > form{
+    margin-top: 15px;
 }
 
 .edit-product{
@@ -201,8 +204,14 @@ a{
 }  
 
 .tab-links {  
-    margin-bottom: 10px;  
-}  
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.tab-links > h5{
+    font-size: 18px;
+}
 
 .comment-input, .name-input {  
     width: calc(100% - 22px);  
@@ -222,15 +231,6 @@ a{
 .error{
     color: #D2D2D2;
 }
-
-/* footer {  
-    background-color: #252323;  
-    text-align: center;  
-    padding: 10px;  
-    position: relative;  
-    bottom: 0;  
-    width: 100%;  
-} */
 
 footer{
     background-color: #707070;

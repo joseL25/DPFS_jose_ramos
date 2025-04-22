@@ -17,6 +17,7 @@ const indexRouter = require("./routes/index.routes");
 const usersRoutes = require('./routes/users.routes');
 const productsRoutes = require('./routes/products.routes');
 const userLogged = require('./middlewares/userLogged');
+// const adminsRoutes = require('./routes/admin.routes');
 const db = require('./database/models');
 // const { title } = require('process');
 
@@ -45,12 +46,16 @@ app.use(userLogged);
 app.use("/",indexRouter);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-// app.use("/create", indexRouter);
+// app.use("/admin", adminsRoutes);
 
 // vista del carrito
 app.get('/cart', guestAuth,(req,res)=>{
     res.render('cart.ejs');
 });
+
+app.get('/admin', (req,res)=>{
+    res.render('admin.ejs');
+})
 
 app.use(function(req,res){
     res.status(404).render('not-found.ejs', {title:'VISTA NO ENCONTRADA'})

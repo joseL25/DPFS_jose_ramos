@@ -7,7 +7,7 @@ const {getLogin,
     processLogin,
     logout,
     processUpdate,
-    destroy} = require("../controllers/users.controllers");
+    destroy} = require("../controllers/users.controller");
 const router = express.Router();
 const {uploadUser} = require('../middlewares/multer');
 const loggedMidleware = require("../middlewares/loggedMiddleware");
@@ -25,6 +25,9 @@ router.post('/register',uploadUser.single('image'), processRegister);
 
 //vista de perfil
 router.get('/profile',guestAuth, getProfile);
+
+//vista de Administrador
+// router.get('/admin', adminP);
 
 //vista de edicion de perfil
 router.get('/edit/:id', guestAuth, editProfile);
