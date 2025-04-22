@@ -8,8 +8,7 @@ const submitFunction = (event)=>{
             'Los datos enviados fueron: \n'+
             'nombre: ' + document.getElementById('name').value + '\n'+
             'apellido: ' + document.getElementById('lastname').value + '\n'+
-            'correo: ' + document.getElementById('email').value + '\n' + 
-            'password: ' + document.getElementById('password').value + '\n'
+            'correo: ' + document.getElementById('email').value + '\n' 
         );
     }
 }

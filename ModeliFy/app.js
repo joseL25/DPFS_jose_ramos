@@ -46,10 +46,7 @@ app.use(userLogged);
 app.use("/",indexRouter);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-<<<<<<< HEAD
-// app.use("/admin", adminsRoutes);
-=======
->>>>>>> 3adc660edc04d29cfe098b63bafdb9fb426966e1
+//app.use("/admin", adminsRoutes);
 
 // vista del carrito
 app.get('/cart', guestAuth,(req,res)=>{
