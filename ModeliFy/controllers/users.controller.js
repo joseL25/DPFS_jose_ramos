@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require('express-validator');
 
-// const usersPath = path.join(__dirname, '..', 'data', 'users.json');
 const bcryptjs = require('bcryptjs');
-// const User = require("../services/user");
+
 const db = require('../database/models')
 
 const usersControllers = {
