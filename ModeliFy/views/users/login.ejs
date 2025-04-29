@@ -15,7 +15,7 @@
 
             <!-- <h1>Bienvenido</h1>   -->
             <p>Ingrese sus datos para usar las funciones del sitio</p>  
-            <form action="/users/login" method="post">  
+            <form action="/users/login" method="post" novalidate>  
                 <div class="input-email">
                     <label for="email">Correo</label>  
                     <input 
@@ -23,7 +23,8 @@
                     name="email" 
                     id="email" 
                     placeholder="Ingrese su correo"
-                    value="<%= locals.old?.email ? old.email : "" %>"/>
+                    value="<%= locals.old?.email ? old.email : "" %>" required autocomplete="off">
+                    <div class="error" id="errorEmail"></div>
 
                     <% if (locals.errors?.email) { %>
                      <p class="error"><%= locals.errors.email.msg %></p>
@@ -36,8 +37,10 @@
                     name="password" 
                     id="password" 
                     placeholder="Ingrese su contraseña"
-                    value="<%= locals.old?.password ? old.password : "" %>"/> 
-                    
+                    value="<%= locals.old?.password ? old.password : "" %>" required autocomplete="off"> 
+                    <span id="show-hide">show/Hide</span>
+                    <div class="error" id="errorPassword"></div>
+
                     <% if (locals.errors?.password) { %>
                         <p class="error"><%= locals.errors.password.msg %></p>
                     <% } %> 
@@ -45,7 +48,8 @@
                 
                 <div class="input-check">
                     <label for="rememberme">Recordarme</label>
-                    <input type="checkbox" name="rememberme" id="rememberme">
+                    <input type="checkbox" name="rememberme" id="rememberme" required autocomplete="off">
+                    <div class="error" id="errorRememberme"></div>
                 </div>
 
                 <button type="submit" class="login-button">Iniciar Sesión</button>  

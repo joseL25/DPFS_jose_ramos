@@ -7,11 +7,11 @@ module.exports = {
       'products', [
       {
         name: 'cohete',
-        description: '',
-        price: '',
-        category_id: '',
-        file_id: '',
-        image: ''
+        description: 'Inspirado en los viajes interestelares',
+        price: '15',
+        category: 'solido',
+        file: 'STL',
+        image: 'http://localhost:3000/images/predeterminado/cohete.jpg'
       },
 
     ], {});
