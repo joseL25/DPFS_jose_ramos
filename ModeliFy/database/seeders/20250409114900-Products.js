@@ -6,6 +6,7 @@ module.exports = {
     await queryInterface.bulkInsert(
       'products', [
       {
+        id: 1,
         name: 'cohete',
         description: 'Inspirado en los viajes interestelares',
         price: '15',

@@ -11,7 +11,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <% modelSeed.forEach(model => { %>
+        <tr>
+          <td>Modelo 1</td>
+          <td>Arquitectura</td>
+          <td>10/04/2025</td>
+          <td>
+            <button>Editar</button>
+            <button>Eliminar</button>
+            <button>Visualizar</button>
+          </td>
+        </tr>
+      <% }) %>
+      <!-- <tr>
         <td>Modelo 1</td>
         <td>Arquitectura</td>
         <td>10/04/2025</td>
@@ -20,17 +32,7 @@
           <button>Eliminar</button>
           <button>Visualizar</button>
         </td>
-      </tr>
-      <tr>
-        <td>Modelo 1</td>
-        <td>Arquitectura</td>
-        <td>10/04/2025</td>
-        <td>
-          <button>Editar</button>
-          <button>Eliminar</button>
-          <button>Visualizar</button>
-        </td>
-      </tr>
+      </tr> -->
       <!-- Más filas aquí -->
     </tbody>
   </table>
