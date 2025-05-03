@@ -81,6 +81,27 @@ p {
     text-shadow: 0 0px 10px rgb(175, 2, 7);
 }
 
+.display-errors{
+    width: 55%;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.356);
+    list-style: none;
+    opacity: 0.66;
+    border: 1px solid red;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgb(177, 1, 1);
+}
+
+/* .errors::before{
+    border: 1px solid red;
+    opacity: 1;
+} */
+
+/* .errors li{
+    color: black;
+} */
+
 label {  
     display: block;  
     margin: 10px 0 5px; /* Espacio entre la etiqueta y el campo */  

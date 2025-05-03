@@ -20,11 +20,11 @@
 
                 <div class="name-lastName">
                     <div class="input-text">
-                        <input type="text" name="name" id="name" placeholder="nombre" minlength="3" required autocomplete="off">
+                        <input type="text" name="name" id="name" placeholder="nombre" required autocomplete="off">
                         <div class="error" id="errorName"></div>
                     </div>
                     <div class="input-text">
-                        <input type="text" name="lastname" id="lastname" placeholder="apellido" minlength="3" required autocomplete="off">
+                        <input type="text" name="lastname" id="lastname" placeholder="apellido" required autocomplete="off">
                         <div class="error" id="errorLastname"></div>
                     </div>
                 </div>
@@ -51,14 +51,16 @@
 
             <div class="options">
                 <div class="login">
-                    <a href="/users/login">Iniciar Sesion</a> 
+                    <a href="/users/login">Iniciar Sesion</a>
                 </div>
                 <div>
                     <a href="/">Volver al Inicio</a>
                 </div>
             </div>
-        </div>  
-    </div> 
-    <script src="/js/register.js"></script>
+        </div>
+    </div>
+    <!-- Script JS -->
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/validaciones/register.js"></script>
 </body>
 </html>
