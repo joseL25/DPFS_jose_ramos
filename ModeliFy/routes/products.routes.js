@@ -9,15 +9,16 @@ const { product,
 // const multer = require("multer");
 const upload = require("../middlewares/multer.js");
 const guestAuth = require("../middlewares/guestAuth.js");
+const { createCheck } = require("../middlewares/validator.js");
 
 
 const router = express.Router();
 
 
-//vista del formulario de creacion
-router.get("/create",guestAuth, create);
+//vista del formulario de creacion    guestAuth,
+router.get("/create", create);
 //proceso de creacion del producto
-router.post("/create", upload.uploadProd.single('imagen'), save);
+router.post("/create", upload.uploadProd.single('imagen'), createCheck, save);
 //vista del producto
 router.get('/detail/:id', product);
 //vista del formulario de edicion

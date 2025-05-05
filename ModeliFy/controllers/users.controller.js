@@ -69,19 +69,26 @@ const usersControllers = {
     processRegister: async(req,res)=>{
         // let users = User.findAll();
         try {
-            let newUser = {
-                // id: users.length + 1,
-                name: req.body.name,
-                lastname: req.body.lastname,
-                email: req.body.email,
-                password: bcryptjs.hashSync(req.body.password, 8),
-                avatar: req.file?.filename || 'default.png',
-                role: 0
+            const resultValidator = validationResult(req);
+            if(resultValidator.isEmpty()){
+                let newUser = {
+                    // id: users.length + 1,
+                    name: req.body.name,
+                    lastname: req.body.lastname,
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password, 8),
+                    avatar: req.file?.filename || 'default.png',
+                    role: 0
+                }
+                // users.push(newUser);
+                // fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
+                await db.User.create(newUser)
+                res.redirect('/');
+            } else{
+                return res.render('../views/users/register',{
+                    errors: resultValidator.mapped(), old: req.body,
+                });
             }
-            // users.push(newUser);
-            // fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
-            await db.User.create(newUser)
-            res.redirect('/');
         } catch (error) {
             console.log(error); 
         }

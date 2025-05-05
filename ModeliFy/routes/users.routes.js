@@ -12,7 +12,7 @@ const router = express.Router();
 const {uploadUser} = require('../middlewares/multer');
 const loggedMidleware = require("../middlewares/loggedMiddleware");
 const guestAuth = require("../middlewares/guestAuth");
-const { loginCheck } = require("../middlewares/validator");
+const { loginCheck, registerCheck } = require("../middlewares/validator");
 
 
 // vista de login
@@ -21,7 +21,7 @@ router.post('/login', loginCheck, processLogin);
 
 //vista de register
 router.get('/register', getRegister);
-router.post('/register',uploadUser.single('image'), processRegister);
+router.post('/register',uploadUser.single('image'), registerCheck, processRegister);
 
 //vista de perfil
 router.get('/profile',guestAuth, getProfile);

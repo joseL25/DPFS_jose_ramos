@@ -39,7 +39,7 @@
                     placeholder="Ingrese su contraseña"
                     value="<%= locals.old?.password ? old.password : "" %>" required autocomplete="off">
                     <!-- <div class="error" id="errorPassword"></div> -->
-                    <span id="show-hide">show/Hide</span>
+                    <!-- <span id="show-hide">show/Hide</span> -->
 
                     <% if (locals.errors?.password) { %>
                         <p class="error"><%= locals.errors.password.msg %></p>

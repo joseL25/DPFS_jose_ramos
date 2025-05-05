@@ -61,6 +61,18 @@ h1 {
     /* width: 90%; */
 }
 
+.display-errors{
+    width: 80%;
+    margin: 0 auto 15px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.356);
+    list-style: none;
+    opacity: 0.66;
+    border: 1px solid red;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgb(177, 1, 1);
+}
+
 .name-lastName{
     display: flex;
     justify-content: space-around;
