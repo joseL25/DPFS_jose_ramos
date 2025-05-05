@@ -19,6 +19,18 @@ const registerCheck = [
     .notEmpty().withMessage('Debes ingresar un password')
     .isLength({min: 6}).withMessage('Debe tener al menos 6 caracteres').bail(),
 ]
+const editUserCheck = [
+    check('name')
+    .notEmpty().withMessage('Debes ingresar tu nombre'),
+    check('lastname')
+    .notEmpty().withMessage('Debes ingresar tu apellido'),
+    check('email')
+    .notEmpty().withMessage('Debes ingresar un email')
+    .isEmail().withMessage('Debes ingresar un Email valido').bail(),
+    check('password')
+    .notEmpty().withMessage('Debes ingresar un password')
+    .isLength({min: 6}).withMessage('Debe tener al menos 6 caracteres').bail(),
+]
 
 const createCheck = [
     check('name')
@@ -48,4 +60,4 @@ const editProductCheck = [
     .notEmpty().withMessage('Debes seleccionar una opcion')
 ]
 
-module.exports = {loginCheck, registerCheck, createCheck, editProductCheck};
+module.exports = {loginCheck, registerCheck, createCheck, editProductCheck, editUserCheck};

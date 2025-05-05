@@ -110,25 +110,38 @@ const usersControllers = {
         }
     },
     processUpdate: async(req,res)=>{
-        // let users = JSON.parse(fs.readFileSync(usersPath,'utf-8'));
-        let userFound = await db.User.findByPk(req.params.id);
-        userFound = {
-            ...userFound,
-            name: req.body.name,
-            lastname: req.body.lastname,
-            email: req.body.email,
-            password: req.body.password == "" ? userFound.password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file?.filename || userFound.avatar
+        try {
+            let userFound = await db.User.findByPk(req.params.id);
+            const resultValidator = validationResult(req);
+            if(resultValidator.isEmpty()){
+                // let users = JSON.parse(fs.readFileSync(usersPath,'utf-8'));
+                userFound = {
+                    ...userFound,
+                    name: req.body.name,
+                    lastname: req.body.lastname,
+                    email: req.body.email,
+                    password: req.body.password == "" ? userFound.password: bcryptjs.hashSync(req.body.password, 10),
+                    avatar: req.file?.filename || userFound.avatar
+                }
+        
+                await db.User.update(userFound,{
+                    where:{ id: req.params.id }
+                })
+                
+                // fs.writeFileSync(usersPath, JSON.stringify(users,null, " "));
+                req.session.userLogged = userFound;
+                res.redirect('/');
+            } else{
+                return res.render('../views/users/editProfile',{
+                    errors: resultValidator.mapped(), 
+                    old: req.body, 
+                    user: userFound
+                });
+            }
+        } catch (error) {
+            console.log(error);
+            
         }
-
-        await db.User.update(userFound,{
-            where:{ id: req.params.id }
-        })
-        
-        
-        // fs.writeFileSync(usersPath, JSON.stringify(users,null, " "));
-        req.session.userLogged = userFound;
-        res.redirect('/');
     },
     destroy: async(req,res)=>{
         //1. eliminar la imagen

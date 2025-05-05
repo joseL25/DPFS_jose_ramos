@@ -43,14 +43,31 @@ h1 {
     background-color: #1a1a1a;
     height: 70%;
     width: 40%;
-    padding: 20px 20px 5px 20px;  
+    padding: 20px 20px 5px 20px;
     border: 2px solid #7e801a;
     border-radius: 50px;  
     text-align: center;  
     /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); */
     box-shadow: 0 0px 20px rgba(252, 255, 91, 0.5);
     align-content: center;
-}  
+} 
+
+.error{
+    color: red;
+    font-size: 15px;
+    /* width: 90%; */
+}
+.display-errors{
+    width: 80%;
+    margin: 0 auto 20px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.356);
+    list-style: none;
+    opacity: 0.66;
+    border: 1px solid red;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgb(177, 1, 1);
+  }
 
 .name-lastName{
     display: flex;
@@ -79,10 +96,17 @@ label {
 input {  
     width: 50%;  
     padding: 10px;  
-    margin-bottom: 20px;  
+    margin-bottom: 5px;  
     border: 1px solid #ccc;  
     border-radius: 5px;  
-}  
+}
+
+.input-text input{
+    width: 100%;
+}
+.input-text{
+    width: 40%;
+}
 
 input:focus {  
     outline: none;  
