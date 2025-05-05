@@ -266,6 +266,24 @@ a{
   width: 100%;
 }
 
+.error{
+  color: red;
+  font-size: 15px;
+  /* width: 90%; */
+}
+
+.display-errors{
+  width: 80%;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: rgba(255, 0, 0, 0.521);
+  list-style: none;
+  opacity: 0.66;
+  border: 1px solid red;
+  border-radius: 15px;
+  box-shadow: 0 0px 20px rgb(177, 1, 1);
+}
+
 main{
   height: auto;
   width: 40%;
@@ -315,11 +333,12 @@ main{
   text-align: center;
 }
 
-.send button{
+.send input{
   width: 30%;
   padding: 2% 1%;
   border-radius: 10px;
   background-color: #693d60;
+  border: none;
 }
 
 

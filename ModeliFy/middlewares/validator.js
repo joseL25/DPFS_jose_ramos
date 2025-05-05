@@ -34,7 +34,7 @@ const createCheck = [
     .notEmpty().withMessage('Debes seleccionar una opcion')
 ]
 
-const editCheck = [
+const editProductCheck = [
     check('name')
     .notEmpty().withMessage('Ingresa el nombre de tu modelo'),
     check('description')
@@ -48,4 +48,4 @@ const editCheck = [
     .notEmpty().withMessage('Debes seleccionar una opcion')
 ]
 
-module.exports = {loginCheck, registerCheck, createCheck, editCheck};
+module.exports = {loginCheck, registerCheck, createCheck, editProductCheck};

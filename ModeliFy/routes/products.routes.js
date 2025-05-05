@@ -9,7 +9,7 @@ const { product,
 // const multer = require("multer");
 const upload = require("../middlewares/multer.js");
 const guestAuth = require("../middlewares/guestAuth.js");
-const { createCheck } = require("../middlewares/validator.js");
+const { createCheck, editProductCheck } = require("../middlewares/validator.js");
 
 
 const router = express.Router();
@@ -24,7 +24,7 @@ router.get('/detail/:id', product);
 //vista del formulario de edicion
 router.get("/edit/:id", edit);
 //proceso de edicion
-router.put('/edit/:id', upload.uploadProd.single('imagen'), update);
+router.put('/edit/:id', upload.uploadProd.single('imagen'), editProductCheck, update);
 //proceso de borrar
 router.delete('/delete/:id', destroy);
 

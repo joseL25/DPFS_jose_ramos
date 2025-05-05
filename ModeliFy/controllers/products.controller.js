@@ -68,22 +68,33 @@ module.exports = {
     update:async(req,res)=>{
         try {
             let modelEdit = await db.Product.findByPk(req.params.id);
-    
-            let modUpdate = {
-                name: req.body.name || modelEdit.name,
-                description: req.body.description || modelEdit.description,
-                price: req.body.price || modelEdit.price,
-                category_id: req.body.category || modelEdit.category_id,
-                file_id: req.body.file || modelEdit.file_id,
-                image: req.file?.filename || modelEdit.image,
-            }
-    
-            await db.Product.update(modUpdate, {
-                where:{
-                    id: req.params.id
+            const categories = await db.Category.findAll();
+            const files = await db.File.findAll();
+            const resultValidator = validationResult(req);
+            if(resultValidator.isEmpty()){
+                // let modelEdit = await db.Product.findByPk(req.params.id);
+                let modUpdate = {
+                    name: req.body.name || modelEdit.name,
+                    description: req.body.description || modelEdit.description,
+                    price: req.body.price || modelEdit.price,
+                    category_id: req.body.category || modelEdit.category_id,
+                    file_id: req.body.file || modelEdit.file_id,
+                    image: req.file?.filename || modelEdit.image,
                 }
-            })
-            res.redirect('/');
+        
+                await db.Product.update(modUpdate, {
+                    where:{
+                        id: req.params.id
+                    }
+                })
+                res.redirect('/');
+            } else{
+                return res.render('products/edit',{
+                    errors: resultValidator.mapped(), 
+                    old: req.body, categories, files, modelEdit
+                });
+            }
+
         } catch (error) {
             console.log(error);
         }
