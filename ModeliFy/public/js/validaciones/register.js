@@ -37,6 +37,12 @@ window.onload = ()=>{
             errors.forEach(err => {
                 errorsList.innerHTML += `<li>${err}</li>`;
             });
+        } else{
+            Swal.fire({
+                title: "Registro Exitoso",
+                icon: "success",
+                draggable: true
+              });
         }
     }
 }

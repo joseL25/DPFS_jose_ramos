@@ -83,7 +83,7 @@ const usersControllers = {
                 // users.push(newUser);
                 // fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
                 await db.User.create(newUser)
-                res.redirect('/');
+                res.redirect('/users/login');
             } else{
                 return res.render('../views/users/register',{
                     errors: resultValidator.mapped(), old: req.body,
