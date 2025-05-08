@@ -75,8 +75,6 @@ p {
 }
 
 .error{
-    position: relative;
-    bottom: 18px;
     color: red;
     text-shadow: 0 0px 10px rgb(175, 2, 7);
 }

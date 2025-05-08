@@ -1,0 +1,1 @@
+// aca van los eventos para los llamados de cada partial que necesite el administrador

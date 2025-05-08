@@ -12,7 +12,34 @@ module.exports = {
         price: '15',
         category: 'solido',
         file: 'STL',
-        image: 'http://localhost:3000/images/predeterminado/cohete.jpg'
+        image: 'cohete.jpg'
+      },
+      {
+        id: 2,
+        name: 'arcade',
+        description: 'descripcion de un arcade modelado en 3D',
+        price: '23',
+        category: 'solido',
+        file: 'STL',
+        image: 'arcade.jpg'
+      },
+      {
+        id: 3,
+        name: 'camara',
+        description: 'descripcion de una camara modelada en 3D',
+        price: '28',
+        category: 'procedimental',
+        file: 'STL',
+        image: 'camara.jpg'
+      },
+      {
+        id: 4,
+        name: 'astronauta',
+        description: 'Descripcion de un astronauta',
+        price: '40',
+        category: 'solido',
+        file: 'STL',
+        image: 'astronauta.jpg'
       },
 
     ], {});

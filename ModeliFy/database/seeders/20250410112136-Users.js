@@ -10,10 +10,11 @@ module.exports = {
         id: 1,
         name: 'Jose',
         lastname: 'Ramos',
-        email: 'admin@gmail.com',
-        password: 'DEF123456',
+        email: 'user@gmail.com',
+        password: 'ABC123456',
         avatar: 'default.png',
-        role: 1,
+        role: "user",
+        // role_id: 1,
   }], {});
   },
 

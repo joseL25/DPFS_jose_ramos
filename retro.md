@@ -6,4 +6,3 @@ mejoras a implementar luego de la realizacion del sprint 5:
 mejoras a implementar luego de la realizacion del sprint 6:
 - mas practica programando
 - concretar ciertos puntos
-- 

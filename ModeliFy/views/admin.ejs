@@ -2,8 +2,10 @@
 <html lang="en">
     <%- include('./partials/head.ejs',{style:"admin"}) %>
 <body>
-    <%- include('./partials/nav-bar.ejs') %>
-    <main>
+  <main>
+      <div class="back">
+        <input type="submit" value="Volver">
+      </div>
         <div class="dashboard">
           <header>
             <h1>Panel de Administración</h1>
@@ -36,5 +38,6 @@
         </div>
       </main>
       <%- include('./partials/footer.ejs') %>
+      <script src="/js/admin.js"></script>
 </body>
 </html>

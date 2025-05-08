@@ -11,10 +11,10 @@
       </tr>
     </thead>
     <tbody>
-      <% modelSeed.forEach(model => { %>
+      <% models.forEach(model => { %>
         <tr>
-          <td>Modelo 1</td>
-          <td>Arquitectura</td>
+          <td><%= model.name %></td>
+          <td><%= model.category %></td>
           <td>10/04/2025</td>
           <td>
             <button>Editar</button>

@@ -15,4 +15,4 @@ Trello:
 miro(wireframe):
 - [Miro](https://miro.com/app/board/uXjVLHTq3R0=/?share_link_id=627361408771)
 
-Estas paginas me llamaron la atencion tanto por como tenian organizado sus secciones como por los colores y animaciones que tenian en sus paginas
+Estas paginas me llamaron la atencion tanto por como tenian organizado sus secciones como por los colores y animaciones que tenian en sus paginas 

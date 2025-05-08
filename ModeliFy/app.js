@@ -54,8 +54,11 @@ app.get('/cart', guestAuth,(req,res)=>{
 });
 
 app.get('/admin', async(req,res)=>{
-    const modelSeed = await db.Product.findByPk(req.params.id);
-    res.render('admin.ejs',{ modelSeed });
+    // const modelsUpdate = await db.Product.findByPk(req.params.id);
+    const models = await db.Product.findAll(
+                    {include:["categories","files"]}
+                );
+    res.render('admin.ejs',{ models });
 })
 
 app.use(function(req,res){
