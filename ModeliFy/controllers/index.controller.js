@@ -23,20 +23,26 @@ const indexController = {
             const models = await db.Product.findAll(
                 {include:["categories","files"]}
             );
-            const query = req.query.q?.trim() || '';
 
-            const results = await db.Product.findAll();
+            const modelSearch = req.body?.productSearch.trim() || '';
+            const modelResult = []
 
-            res.render('MPS', {});
+            if (!modelSearch) {
+                return res.render('MPS', { modelResult: [] });
+            }
+
+            models.forEach(model => {
+                if(modelSearch == model.name){
+
+                }
+            });
+
+            res.render('MPS', {modelResult});
         } catch (error) {
             console.log(error);
             
         }
     }
-    // create:(req,res)=>{
-    //     const models = JSON.parse(fs.readFileSync(modelsPath,'utf-8'));
-    //     res.render("products/create.ejs");
-    // }
 }
 
 module.exports = indexController;
