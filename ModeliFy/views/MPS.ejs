@@ -1,0 +1,47 @@
+<!-- Main Products Search MPS -->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs',{style:"MPS"}) %>
+
+    <body>
+        <%- include('./partials/nav-bar.ejs') %>
+        <h2>Resultados para "<%= query %>"</h2>
+        <main>
+        <% if (results.length> 0) { %>
+
+            <% results.forEach(product=> { %>
+                <div class="product-content">
+                    <div class="product-dat-sup">
+                        <div class="user-public">
+                            <i class="fa-solid fa-user"></i>
+                            <h3>
+                                usuario
+                            </h3>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+
+                    <a href="/products/detail/<%= product.id %>">
+                        <img class="model" src="./images/modelos/<%= product.image %>" alt="<%= product.name %>">
+                    </a>
+                    <div class="product-dat-inf">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <h3 class="camara-title">
+                            <%= product.name %>
+                        </h3>
+                        <h3 class="camara-price">$<%= product.price %>
+                        </h3>
+                    </div>
+                </div>
+            <% }) %>
+
+        <% } else { %>
+            <p>No se encontraron productos.</p>
+        <% } %>
+        </main>
+
+    </body>
+
+</html>

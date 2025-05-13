@@ -1,6 +1,7 @@
 // const fs = require("fs");
 // const path = require("path");
 const db = require('../database/models');
+const { Op } = require('sequelize');
 
 // const modelsPath = path.join(__dirname,'..','data','products.json');
 
@@ -17,6 +18,21 @@ const indexController = {
             console.log(error);
         }
     },
+    searchProduct: async(req,res)=>{
+        try {
+            const models = await db.Product.findAll(
+                {include:["categories","files"]}
+            );
+            const query = req.query.q?.trim() || '';
+
+            const results = await db.Product.findAll();
+
+            res.render('MPS', {});
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
     // create:(req,res)=>{
     //     const models = JSON.parse(fs.readFileSync(modelsPath,'utf-8'));
     //     res.render("products/create.ejs");

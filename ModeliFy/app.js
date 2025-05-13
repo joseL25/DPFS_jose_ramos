@@ -6,7 +6,6 @@ const session = require("express-session");
 const cookieParser = require('cookie-parser');
 const guestAuth = require("./middlewares/guestAuth");
 
-
 const port = 3000;
 
 //LOGS de las peticiones
@@ -59,7 +58,7 @@ app.get('/admin', async(req,res)=>{
                     {include:["categories","files"]}
                 );
     res.render('admin.ejs',{ models });
-})
+});
 
 app.use(function(req,res){
     res.status(404).render('not-found.ejs', {title:'VISTA NO ENCONTRADA'})
